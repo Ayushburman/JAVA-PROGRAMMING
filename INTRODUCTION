@@ -1,0 +1,49 @@
+java is a programming language + Platform 
+released by Sun Microsystems in 1995
+Inventor- James Gosling [https://en.wikipedia.org/wiki/James_Gosling]
+Write Once, Run Anywhere (WORA)
+Works on OOP concept
+JDK JRE JVM
+JDK - JAVA DEVELOPMENT KIT -provides tools for developing java Applications,
+                            includes Compiler,Debugger and other utilities
+                            
+Java Compiler                - javac - (Convert Source code to Byte Code.)
+Java Debugger                - jdb   - (Assist you in Debugging Your Application.)
+Java Documentation Generator - javadoc - (Used to genereate API documentation from java source code.)
+Java Archive                 - JAR     - ( Allows you to create, manage, and extract JAR files, which are used for packaging and distributing Java applications.)
+java Decompiler              - javap   - (Helps to decompile java Byte Code  into Source Code.)   
+Java FX Compiler             - javaFX  - (framework for building rich client aaplication.)
+
+JRE - JAVA RUNTIME ENVIRONMENT - environment that provides the necessary runtime
+                                 support to execute Java applications
+                                 
+Java Vrtual Machine                 - jvm - (It is responsible for executing Java bytecode and providing a runtime environment for Java applications.)
+Java Class Libraries                   -  - (pre-built classes and APIs for performing common tasks.)
+Java Runtime Environment Configuration -  - (onfiguration files and resources that define the runtime behavior of Java applications, including system properties, environment variables, and other settings that affect the execution environment.)
+Java Plugin                            -  - ( The JRE may include a web browser plugin that allows Java applets to run within web browsers)
+Java Web Start                         -  - (Java Web Start is a technology that allows Java applications to be launched and run directly from a web browser, without the need for manual installation or updating.)
+Security Components                    -  - (The JRE includes security-related components that ensure the safe execution of Java applications.)
+Java Deployment Tools                  -  - (The JRE may include deployment tools that assist in the installation and management of Java applications on client machines, such as auto-update mechanisms, installation wizards, and application cache management.)
+Additional Resources                   -  - (The JRE may contain additional resources, such as fonts, graphics, sound files, and other runtime assets that may be required by Java applications.)
+
+JVM - Java Virtual Machine  -It is responsible for executing Java bytecode and providing
+                             a runtime environment for Java applications,The JVM translates the
+                             bytecode into machine code that can be
+                             understood by the underlying operating system and hardware
+
+Class Loader
+Bytecode Verifier
+Interpreter
+Just-In-Time (JIT) Compiler
+Memory Manager
+Execution Engine
+Native Method Interface
+Java Native Library
+Runtime Data Areas
+Threads and Synchronization
+Monitoring and Profiling
+Security Manager
+
+
+
+
