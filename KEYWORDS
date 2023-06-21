@@ -1,0 +1,41 @@
+PACKAGE
+---------
+In JAVA, a package is a way to organize related classes,interfaces,and other resources.
+provides a mechanism for grouping related code together, makes it easier to maintain.
+package helps to prevent naming conflict between classes.
+provides a hierarchichal structure for locating and accessing classes.
+
+keyword - package
+Example - package com.example.mypackage
+---------------------------------------------------------------------------------------------------------------------------------------
+IMPORT
+------
+In JAVA, import keyword is used to bring classes, interfaces, and other members from other 
+packages into your current Java file.
+
+keyword - import
+Example - import java.util.ArrayList;
+ArrayList is a class
+java.util is a package
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+CLASS
+------
+In Java, a class is a blueprint or a template for creating objects.
+Defines the properties (attributes) and behaviors (methods) that objects of that class will have.
+
+keyword - class "classname"
+Example - class EXAMPLE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***PACKAGE would be like "Chapter" of a book
+Class would be a "paragraph"
+method would be "sentence"***
+----------------------------------------------
+METHOD
+-------
+In Java, a method is a collection of statements that are grouped together to perform a specific task.
+
+keyword - method_name() 
+Example - addNumbers()
+
+--------------------------------------------------------------------------------------------------------------------------
+
