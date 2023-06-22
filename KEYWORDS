@@ -41,102 +41,53 @@ Example - addNumbers()
 abstract - Used to declare abstract classes or methods. 
 abstract class - Animal{}
 abstract method -  abstract void sound();
------------------------------------------------------------------------------------------------------------------------------------------------------
-assert - is used for program assertions to ensure certain conditions are true. It is primarily used for debugging and testing purposes.
-assert <condition>
------------------------------------------------------------------------------------------------------------------------------------------------------
-break -  Used to exit a loop or switch statement prematurely. When encountered, the control flow immediately exits the loop or switch and continues with the next statement after the loop or switch.
-break;
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-byte - A keyword used to declare a byte variable that can hold integer values in the range of -128 to 127.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-case -  Used in switch statements to specify different cases or options to be evaluated.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-catch - Used in exception handling to catch and handle exceptions. It follows the try block and allows the programmer to define actions to be taken when a specific exception is thrown.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-char - A keyword used to declare a char variable that can hold a single character or Unicode value.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-class: Used to declare a class in Java. Classes are the building blocks of Java programs and define the structure, behavior, and attributes of objects.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-const (deprecated): Previously used to declare constant variables, but it is no longer used in Java and has been deprecated.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-continue: Used to skip the current iteration of a loop and continue with the next iteration.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-default: Used in switch statements as the default case when none of the other cases match.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-do: Used to start a do-while loop, which executes a block of code repeatedly while a given condition is true.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-double: A keyword used to declare a double variable that can hold floating-point decimal values with double precision.
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-else: Used in conditional statements to define an alternative block of code to be executed if the condition is false.
 
-enum: Introduced in Java 5, enum is used to declare an enumerated type, which represents a fixed set of constants.
-
-extends: Used to specify inheritance, indicating that a class is derived from another class (the superclass).
-
-final: Used to declare a constant or make a variable, method, or class unchangeable or non-inheritable.
-
-finally: Used in exception handling to define a block of code that is executed regardless of whether an exception is thrown or caught.
-
-float: A keyword used to declare a float variable that can hold floating-point decimal values with single precision.
-
-for: Used to create a for loop, which repeatedly executes a block of code for a specified number of times.
-
-if: Used to perform conditional execution, executing a block of code if a specified condition is true.
-
-implements: Used to indicate that a class is implementing one or more interfaces.
-
-import: Used to import classes, interfaces, or packages from other packages into the current source file.
-
-instanceof: Used to check if an object is an instance of a specific class or implements a specific interface.
-
-int: A keyword used to declare an int variable that can hold integer values.
-
-interface: Used to declare an interface, which is a collection of abstract methods and constants that define a contract for implementing classes.
-
-long: A keyword used to declare a long variable that can hold larger integer values.
-
-native: Used to declare a method as native, indicating that the method is implemented in a platform-specific language.
-
-new: Used to create an instance (object) of a class or an array.
-
-null: A literal that represents a null reference, indicating that a variable does not refer to any object.
-
-package: Used to define a package, which is a way to organize related classes and interfaces.
-
-private: An access modifier used to restrict access to members (variables and methods) to within the same class.
-
-protected: An access modifier used to restrict access to members to within the same class, subclasses, and the same package.
-
-public: An access modifier used to allow access to members from any class or package.
-
-return: Used to exit a method and return a value (if the method has a return type).
-
-short: A keyword used to declare a short variable that can hold smaller integer values.
-
-static: Used to declare static members (variables, methods, blocks) that belong to the class itself, rather than individual instances.
-
-strictfp: Used to ensure consistent floating-point behavior across different platforms.
-
-super: Used to refer to the superclass (parent class) or to call its constructors and methods.
-
-switch: Used to create a switch statement, which provides multiple execution paths based on the value of an expression.
-
-synchronized: Used to create synchronized blocks or methods, ensuring that only one thread can access them at a time.
-
-this: Used to refer to the current object within an instance method or constructor.
-
-throw: Used to explicitly throw an exception within a method or block.
-
-throws: Used in a method signature to indicate that the method can potentially throw certain exceptions.
-
-transient: Used to indicate that a variable should not be serialized when an object is converted to a byte stream.
-
-try: Used to define a block of code in which exceptions might occur and to associate exception handlers (catch blocks) with it.
-
-void: A keyword used as the return type of a method to indicate that the method does not return any value.
-
-volatile: Used to declare variables that are shared among multiple threads, ensuring consistent visibility and ordering of their values.
-
-while: Used to create a while loop, which repeatedly executes a block of code while a specified condition is true.
-
+1.	abstract -	Specifies that a class or method will be implemented later, in a subclass 
+2.	assert	    Assert describes a predicate placed in a java program to indicate that the developer thinks that the predicate is always true at that place.
+3. 	boolean	    A data type that can hold True and False values only 
+4.	break     	A control statement for breaking out of loops.
+5.	byte	      A data type that can hold 8-bit data values 
+6.	case	      Used in switch statements to mark blocks of text
+7.	catch     	Catches exceptions generated by try statements
+8.	char      	A data type that can hold unsigned 16-bit Unicode characters
+9.	class     	Declares a new class
+10.	continue  	Sends control back outside a loop 
+11.	default	    Specifies the default block of code in a switch statement
+12.	do	        Starts a do-while loop
+13.	double    	A data type that can hold 64-bit floating-point numbers
+14.	else	      Indicates alternative branches in an if statement 
+15.	enum	      A Java keyword is used to declare an enumerated type. Enumerations extend the base class.
+16.	extends	    Indicates that a class is derived from another class or interface 
+17.	final	      Indicates that a variable holds a constant value or that a method will not be overridden
+18.	finally	    Indicates a block of code in a try-catch structure that will always be executed
+19.	float	      A data type that holds a 32-bit floating-point number 
+20.	for	        Used to start a for loop
+21.	if	        Tests a true/false expression and branches accordingly
+22.	implements	Specifies that a class implements an interface 
+23.	import 	    References other classes
+24.	instanceof	Indicates whether an object is an instance of a specific class or implements an interface 
+25.	int	        A data type that can hold a 32-bit signed integer 
+26.	interface	  Declares an interface
+27.	long	      A data type that holds a 64-bit integer
+28.	native	    Specifies that a method is implemented with native (platform-specific) code 
+29.	new	        Creates new objects 
+30.	null	      This indicates that a reference does not refer to anything 
+31.	package	    Declares a Java package
+32.	private	    An access specifier indicating that a method or variable may be accessed only in the class it’s declared in
+33.	protected  	An access specifier indicating that a method or variable may only be accessed in the class it’s declared in (or a subclass of the class it’s declared in or other classes in the same package)
+34.	public	    An access specifier used for classes, interfaces, methods, and variables indicating that an item is accessible throughout the application (or where the class that defines it is accessible)
+35.	return	    Sends control and possibly a return value back from a called method 
+36.	short	      A data type that can hold a 16-bit integer 
+37	static	    Indicates that a variable or method is a class method (rather than being limited to one particular object)
+38.	strictfp	  A Java keyword is used to restrict the precision and rounding of floating-point calculations to ensure portability.
+39.	super	      Refers to a class’s base class (used in a method or class constructor) 
+40.	switch	    A statement that executes code based on a test value 
+41.	synchronized	Specifies critical sections or methods in multithreaded code
+42.	this	      Refers to the current object in a method or constructor 
+43.	throw 	    Creates an exception 
+44.	throws	    Indicates what exceptions may be thrown by a method 
+45.	transient	  Specifies that a variable is not part of an object’s persistent state
+46.	try	        Starts a block of code that will be tested for exceptions 
+47.	void	      Specifies that a method does not have a return value
+48.	volatile	  This indicates that a variable may change asynchronously
+49.	while	      Starts a while loop
