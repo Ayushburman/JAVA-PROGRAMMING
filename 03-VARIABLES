@@ -1,38 +1,16 @@
-A variable is the name of a reserved area allocated in memory.
-or 
-It is the name of a memory location 
+public class Quidditch{
+public static void main(String args[]) {
+   
+    String Seeker = ("> Harry Potter");
+    String Keeper = ("> Oliver Wood");
+    String Chaser1 = ("> Alicia Spinnet");
+    String Chaser2 = ("> Katie Bell");
+    String Chaser3 = ("> Angelina Johnson");
+    String Beater1 = ("> Fred Weasely");
+    String Beater2 = ("> George Weasely");
+    String Players =  "\n" + Seeker + "\n" + Keeper + "\n" + Chaser1 + "\n" + Chaser2 + "\n" + Chaser3 + "\n" + Beater1 + "\n" + Beater2 ;
 
-int Age = 60   ['int' is a data type] ['Age' is a Variable] [60 is a value ]
-
-______________________'There are three types of variables'____________________
-        1. LOCAL variable____2.INSTANCE variable____3.STATIC variable
-  
-1. LOCAL variable: A variable declared inside the body of the method is called a local variable
- . A local variable cannot be defined with a "static" keyword.
-//LOCAL variable
-void method()
-{
-int Age = 60
+    System.out.println("How many players are there in gryffindor's quidditch team? " + Players );
+     System.out.println("Who is your seeker? " + "\n" + Seeker );
 }
-
-2. INSTANCE variable: A variable declared inside the class but outside the body of the method
-//INSTANCE variable
-public class vehicle {
-   int doors;
-   int speed;
-public void run(){
 }
-
-3. STATIC variable: A variable declared as static is called a static variable. 
-                   It cannot be local. You can create a single copy of the static
-                   variable and share it among all the class instances.
-                   Memory allocation for static variables happens only once when the class is loaded in the memory.
-//STATIC variable
-public class A  
-{  
-    static int m=100;
-
-}
-
-
-
