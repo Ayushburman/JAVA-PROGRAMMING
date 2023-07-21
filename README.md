@@ -44,11 +44,43 @@ JRE is the superset of JVM.<br>
 
 |            | ```JRE```  |            |
 |------------|------------|------------|
-| ```JVM```  |  ```+```   |  ```CLASS LIB.``` |
+| ```JVM```  |   ```+```  |  ```CLASS LIB.``` |
 
-$${\color{red}Welcome}$$
+**3.** ```What is JDK?``` (Java Development Kit) is a software development kit required to develop applications in Java. When you download JDK, JRE is also downloaded with it.<br>
 
+```JDK``` ----> ```JRE``` ----> ```JVM``` ```+``` ```CLASS LIB.```---->```compiler```,```debugger``` etc.
 
+ ### More.[INTRODUCTION](01-INTRODUCTION)
  
-  ## More.[INTRODUCTION](01-INTRODUCTION)
+ ## VARIABLES
+
+### Java Variables
+A ```variable``` is a location in memory (storage area) to hold data.
+To indicate the storage area, each variable should be given a unique name ```(identifier)```.
+```java
+int Age = 80;
+```
+```Age``` is a Variable and ```int``` is a Data Type,```80``` is Value assigned to ```Age```.
+```int``` Data type refers to that it can only hold Integer type only
+```bash Rules for Naming Variables in Java
+>1 Java is case sensitive. Hence, `age` and `AGE` are two different variables.
+int age = 50;
+int age = 10;
+
+System.out.println(age);  // prints 24
+System.out.println(AGE);  // prints 25
+
+>2 Variables must start with either a `letter` or an `_underscore` or a `$dollar`.
+int age;  // valid name and good practice
+int _age;  // valid but it is a bad practice
+int $age;  // valid but it is a bad practice
+
+> Variable names cannot start with numbers 1,2....
+int 1age;  // invalid variables
+
+> Variable names cannot use whitespace.
+int my age;  // invalid variables
+ 
+```
+
  
