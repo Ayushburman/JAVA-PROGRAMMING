@@ -31,5 +31,5 @@ Hello, World!
  ```String[] args``` It allows you to pass command-line arguments to your Java program when running it.<br>
   ```args```variable is an array of strings that holds the arguments provided when starting the program from the command line.<br>
   ```System.out.println("Hello, World!");```is a print statement. It prints the text```Hello, World!```.<br>
-  [INTRODUCTION](path/to/your/file.txt)
+  [INTRODUCTION](01-INTRODUCTION)
  
