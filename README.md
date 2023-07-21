@@ -31,5 +31,24 @@ Hello, World!
  ```String[] args``` It allows you to pass command-line arguments to your Java program when running it.<br>
   ```args```variable is an array of strings that holds the arguments provided when starting the program from the command line.<br>
   ```System.out.println("Hello, World!");```is a print statement. It prints the text```Hello, World!```.<br>
-  [INTRODUCTION](01-INTRODUCTION)
+  
+
+## Java JDK, JRE and JVM
+**1.** ```JVM (Java Virtual Machine)```🧰is a critical component of the Java Runtime Environment (JRE) that enables Java bytecode to be executed on different platforms.<br>
+**WORKING:** When you run the Java program, Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine code (set of instructions that a computer's CPU executes directly)<br>
+```JAVA PROGRAM```➡️```JAVA BYTECODE```➡️```MACHINE CODE```➡️```OUTPUT```<br>
+
+**2.** ```What is JRE?```
+JRE (Java Runtime Environment) is a software package that provides Java class libraries, Java Virtual Machine (JVM), and other components that are required to run Java applications.<br>
+JRE is the superset of JVM.<br>
+
+|            | ```JRE```  |            |
+|------------|------------|------------|
+| ```JVM```  |  ```+```   |  ```CLASS LIB.``` |
+
+$${\color{red}Welcome}$$
+
+
+ 
+  ## More.[INTRODUCTION](01-INTRODUCTION)
  
