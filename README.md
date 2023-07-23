@@ -142,6 +142,13 @@ A `string` literal is a sequence of characters enclosed inside double-quotes("")
 String str1 = "GitHub";
 String str2 = "TeamHub";
 ```
+### More.[LITERALS](LITERALS)
 
+## Data Types
 
- 
+### Data Types 
+Is `type` of `data` that can be stored inside variables in Java.<br>
+There are **`8`** data types **predefined** in Java, known as *primitive data types.*
+
+**`boolean`**,**`byte`**,**`short`**,**`int`**,**`long`**,**`double`**,**`float`**,**`char`**
+
