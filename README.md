@@ -62,25 +62,31 @@ int Age = 80;
 ```
 ```Age``` is a Variable and ```int``` is a Data Type,```80``` is Value assigned to ```Age```.
 ```int``` Data type refers to that it can only hold Integer type only
-```bash Rules for Naming Variables in Java
->1 Java is case sensitive. Hence, `age` and `AGE` are two different variables.
+```bash
+Rules for Naming Variables in Java:
+>1. Java is case sensitive. Hence, `age` and `AGE` are two different variables.
 int age = 50;
 int age = 10;
 
 System.out.println(age);  // prints 24
 System.out.println(AGE);  // prints 25
 
->2 Variables must start with either a `letter` or an `_underscore` or a `$dollar`.
+>2. Variables must start with either a `letter` or an `_underscore` or a `$dollar`.
 int age;  // valid name and good practice
 int _age;  // valid but it is a bad practice
 int $age;  // valid but it is a bad practice
 
-> Variable names cannot start with numbers 1,2....
+>3. Variable names cannot start with numbers 1,2....
 int 1age;  // invalid variables
 
-> Variable names cannot use whitespace.
+>4. Variable names cannot use whitespace.
 int my age;  // invalid variables
  
 ```
-
+### There are `4` types of variables in Java programming language:
+* Instance Variables (Non-Static Fields)
+* Class Variables (Static Fields)
+* Local Variables
+* Parameters
+## More VARIABLE
  
