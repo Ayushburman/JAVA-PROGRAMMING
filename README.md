@@ -81,12 +81,67 @@ int 1age;  // invalid variables
 
 >4. Variable names cannot use whitespace.
 int my age;  // invalid variables
- 
-```
+ ```
+
 ### There are `4` types of variables in Java programming language:
-* Instance Variables (Non-Static Fields)
-* Class Variables (Static Fields)
-* Local Variables
-* Parameters
-## More VARIABLE
+* Local Variables `A variable declared inside the body of the method is called local variable. `           
+* Instance Variables `A variable declared inside the class but outside the body of the method, is called an instance variable. It is not declared as static.`
+* Class Variables (Static Fields) `A variable that is declared as static is called a static variable.`
+* Parameters `A parameter is a variable that is passed to a method when the method is called.`
+
+
+### More.[VARIABLES](VARIABLES)
+
+## LITERALS
+### Java Literals
+`Literals` are data used for representing fixed values.
+ ```java
+int a = 10;
+float b = 3.14;
+char c = 'F';
+```
+Here, `10`, `3.14`, and `'F'` are `literals`.<br>
+Types of `Literals` in java: `Integer`,`Boolean`,`Float`,`Character`,`String`.<br>
+### Integer 
+An `integer` literal is a numeric value, without any fractional or exponential part. 
+There are `4` types of `integer` literals in Java:
+```java
+// octal 
+int octalNumber = 027;
+
+// decimal
+int decNumber = 3;
+
+// hexadecimal 
+int hexNumber = 0x2F; // 0x represents hexadecimal
+// binary
+int binNumber = 0b10010; // 0b represents binary
+
+```
+**Tip** In Java, binary starts with `0b`, octal starts with `0`, and hexadecimal starts with `0x`.
+### Boolean
+`Boolean` literals are used to initialize boolean data types. They can store two values: `true` and `false`.
+```java
+boolean Question1 = false;
+boolean Question2 = true;
+```
+### Float
+A numeric literal that has either a `fractional` form or an `exponential` form.
+```java
+double myDouble = 3.4; //double used for much larger numbers
+float myFloat = 3.4F;
+```
+### Character
+`Character` literals are unicode character enclosed inside single quotes.
+```java
+char letter = 'a';
+```
+### String
+A `string` literal is a sequence of characters enclosed inside double-quotes("").
+```java
+String str1 = "GitHub";
+String str2 = "TeamHub";
+```
+
+
  
