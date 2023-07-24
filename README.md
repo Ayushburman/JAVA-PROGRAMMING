@@ -151,4 +151,3 @@ Is `type` of `data` that can be stored inside variables in Java.<br>
 There are **`8`** data types **predefined** in Java, known as *primitive data types.*
 
 **`boolean`**,**`byte`**,**`short`**,**`int`**,**`long`**,**`double`**,**`float`**,**`char`**
-
