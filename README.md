@@ -221,4 +221,43 @@ System.out.println(number);  // prints -42.3
 char letter = '\u0051';
 System.out.println(letter);  // prints Q
 ```
+# Operators
+### Operators
+Operators are symbols that perform operations on variables and values. 
+`Operators` in Java can be classified into `5` types:
+* Arithmetic Operators
+* Assignment Operators
+* Relational Operators
+* Logical Operators
+* Unary Operators
+* Bitwise Operators
+
+**1.** Java **Arithmetic** Operators:-
+**`Arithmetic`** operators are used to perform `arithmetic` operations on variables and data.
+```java
+a + b;
+```
+|Operators|Operations|  
+|----|----|
+| +|Addition|  
+| -|Subtraction|   
+| *|Multiplication|
+| /|Division|
+| %|Modulo|
+
+**2.** Java **Assingment** Operators:-<br>
+**`Assignment`** operators are used in Java to assign values to variables.
+```java
+int age;
+age = 5;
+```
+|Operators|Operations|  
+|----|----|
+|=| Assingment |  
+|+=|Addition Assingment|   
+|-=|Subtraction Assingment|
+|*=|Multiplication Assingment|
+|/=|Division Assingment|
+|%=|Modulo Assingment|
+
 
