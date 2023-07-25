@@ -260,4 +260,76 @@ age = 5;
 |/=|Division Assingment|
 |%=|Modulo Assingment|
 
+**3.** Java **Relational** Operators:-
+**`Relational`** operators are used to check the relationship between two operands
+```java
+// check if a is less than b
+a < b;
+```
+|Operators|Operations|  
+|----|----|
+|==| Is Equal to |  
+|!=| Is Not Equal to|   
+|>|Greater Than|
+|<|Less Than|
+|>=|Greater Than or Equal to|
+|<=|Less Than or Equal to|
+
+**4**. Java **Logical** Operators:-
+**`Logical`** operators are used to check whether an expression is `true` or `false`. They are used in decision making.
+
+|Operators|Operations|  
+|----|----|
+|&&| AND |  
+|\|\|| OR |  
+|!| NOT |
+
+**5**. Java **Unary** Operators:-
+**`Unary`** operators are used with only one operand.
+For example, `++` is a unary operator that increases the value of a variable by `1`. That is, `++1` will return `2`.
+
+|Operators|Operations|  
+|----|----|
+|+| Unary plus |  
+|-| Unary minus|   
+|++|Increment Operator|
+|--|Decrement Operator|
+|!|Logical Compliment|
+
+**6**. Java **Bitwise** Operators:-
+**`Bitwise`** operators in Java are used to perform operations on individual bits.
+
+|Operator|Description|
+|----|----|
+|~| Bitwise Complement|
+|<<|Left Shift|
+|>>|Right Shift|
+|>>>|Unsigned Right Shift|
+|&|Bitwise AND|
+|^|Bitwise exclusive OR|
+
+> ⭐ Java `instanceof` Operator
+>> The `instanceof` operator checks whether an object is an instanceof a particular class.
+ ```java
+      // checks if str is an instance of
+    // the String class
+    result = str instanceof String;
+    System.out.println("Is str an object of String? " + result);
+  }
+}
+```
+> Output:  Is str an object of String? true
+
+> ⭐Java `Ternary` Operator
+>> The `ternary` operator (conditional operator) is shorthand for the if-then-else statement.
+```java
+//variable = Expression ? expression1 : expression2
+// ternary operator
+result = (februaryDays == 28) ? "Not a leap year" : "Leap year";
+System.out.println(result);
+```
+
+> Output: Leap year
+
+
 
