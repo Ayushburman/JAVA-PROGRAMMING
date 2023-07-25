@@ -367,3 +367,39 @@ Ayush
 Burman
 Ayush Burman
 ```
+## Java Input
+* Get input from user using the object of **`Scanner`** class.
+* To use the object of **`Scanner`**, we need to import `java.util.Scanner` package.
+```java
+import java.util.Scanner;
+```
+```java
+// create an object of Scanner
+Scanner input = new Scanner(System.in);
+
+// take input from the user
+int number = input.nextInt();
+```
+```java
+import java.util.Scanner;
+
+class Input {
+    public static void main(String[] args) {
+    	
+        Scanner input = new Scanner(System.in);
+    	
+        System.out.print("Enter your age: ");
+        int number = input.nextInt();
+        System.out.println("You entered " + number);
+
+        // closing the scanner object
+        input.close();
+    }
+}
+```
+```java
+Output:
+Enter your age: 23
+You entered 23
+```
+More.[]()
