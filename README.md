@@ -221,6 +221,7 @@ System.out.println(number);  // prints -42.3
 char letter = '\u0051';
 System.out.println(letter);  // prints Q
 ```
+### More.[DATA TYPES](DATA TYPES)
 # Operators
 ### Operators
 Operators are symbols that perform operations on variables and values. 
