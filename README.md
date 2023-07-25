@@ -142,7 +142,7 @@ A `string` literal is a sequence of characters enclosed inside double-quotes("")
 String str1 = "GitHub";
 String str2 = "TeamHub";
 ```
-### More.[LITERALS](LITERALS)
+### More.[LITERALS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/e17be1a85679a1bdaa0c939bb4a64034f101d8ed/VARIABLES%20%26%20LITERALS)
 
 ## Data Types
 
@@ -221,7 +221,7 @@ System.out.println(number);  // prints -42.3
 char letter = '\u0051';
 System.out.println(letter);  // prints Q
 ```
-### More. [DATA TYPES](DATA TYPES)
+### More. [DATA TYPES](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/e17be1a85679a1bdaa0c939bb4a64034f101d8ed/DATA%20TYPES)
 # Operators
 ### Operators
 Operators are symbols that perform operations on variables and values. 
@@ -329,8 +329,41 @@ For example, `++` is a unary operator that increases the value of a variable by 
 result = (februaryDays == 28) ? "Not a leap year" : "Leap year";
 System.out.println(result);
 ```
+> Output: Leap year<br>
 
-> Output: Leap year
+### More.[OPERATORS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f1e4315bdc6513efbf77f513434aeacdf6904624/OPERATORS)
 
+# Java Basic Input and Output
+## Java Output
+```java
+System.out.println(); or
 
+System.out.print(); or
 
+System.out.printf();
+
+```
+* **`System`** is a `class`
+* **`out`** is a `public`,`static` field.
+```java
+ System.out.println("I Love Harry Potter Books!.");   
+```
+> Output:I Love Harry Potter Books!<br>
+
+Difference between  `println()`, `print()`and `printf()`.
+* **`print()`** - It prints string without adding newline.
+* **`println()`** - It prints strings, Then the cursor moves to the beginning of the next line.
+* **`printf()`** - It provides string formatting (similar to printf in C/C++ programming).
+
+```java
+System.out.println("Ayush");//println
+System.out.println("Burman");
+System.out.print("Ayush");//print
+System.out.print("Burman");
+```
+```java
+Output:
+Ayush
+Burman
+Ayush Burman
+```
