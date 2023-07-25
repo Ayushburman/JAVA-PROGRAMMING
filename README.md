@@ -402,4 +402,58 @@ Output:
 Enter your age: 23
 You entered 23
 ```
-More.[]()
+### More.[INPUT OUTPUT](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f9600f8e4849baeaf3ed958f5ba6032147aaca3a/INPUT%20OUTPUT)
+
+# **Expressions** 
+* A Java `expression` consists of `variables`, `operators`, `literals`, and `method calls`.
+```java
+int marks; 
+marks = 90;
+```
+```bash
+> marks = 90 is a Expression.
+```
+# **Statements**
+* Statement is a complete unit of execution.
+```bash
+int sum = 9*5;
+```
+```java
+// expression
+number = 10
+// statement
+number = 10;
+```
+# **Blocks**
+A `block` is a group of statements (zero or more) that is enclosed in curly braces `{ }`.
+```java
+ String band = "Beatles";
+    	
+        if (muggle == "dudley") { // start of block
+            System.out.print("Hey ");
+            System.out.print("Harry!");
+        } // end of block
+    }
+}
+```
+```java
+Output: Hey Harry!
+```
+# **Comments**
+`Comments` are a portion of the program that are completely ignored by Java compilers.
+*syntax* = `//`
+
+**Types of Comments in Java**
+There are two types of comments:
+* single-line comment `//`
+* multi-line comment `/***/`
+```java
+//This is a single line comment.
+/*This is
+ a Multi line
+ Comment
+*/
+```
+
+  
+
