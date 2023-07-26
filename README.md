@@ -90,7 +90,7 @@ int my age;  // invalid variables
 * Parameters `A parameter is a variable that is passed to a method when the method is called.`
 
 
-### More.[VARIABLES](VARIABLES)
+### More.[VARIABLES](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/73668d87dd759660010b1dd97df5da1a875116c4/VARIABLES%20%26%20LITERALS.java)
 
 ## LITERALS
 ### Java Literals
@@ -142,7 +142,7 @@ A `string` literal is a sequence of characters enclosed inside double-quotes("")
 String str1 = "GitHub";
 String str2 = "TeamHub";
 ```
-### More.[LITERALS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/e17be1a85679a1bdaa0c939bb4a64034f101d8ed/VARIABLES%20%26%20LITERALS)
+### More.[LITERALS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/73668d87dd759660010b1dd97df5da1a875116c4/VARIABLES%20%26%20LITERALS.java)
 
 ## Data Types
 
