@@ -457,13 +457,13 @@ There are two types of comments:
 # **Java Flow Control**
 * controls the *flow* of **code**.
   
-### Java **`if`** Statement.
+### 1.Java **`if`** Statement.
 ```java
 if (condition) {
   // statements
 }
 ```
-
+### Program
 ```java
 class IfStatement {
   public static void main(String[] args) {
@@ -479,5 +479,227 @@ class IfStatement {
   }
 }
 ```
+```java
+OUTPUT:Statement outside if block
+```
+### 2. Java **`if...else`** Statement.
 
+```java
+if (condition) {
+  // codes in if block
+}
+else {
+  // codes in else block
+}
+```
+### Program
+```java
+class Main {
+  public static void main(String[] args) {
+    int number = 10;
 
+    // checks if number is greater than 0
+    if (number > 0) {
+      System.out.println("The number is positive.");
+    }
+    
+    // execute this block
+    // if number is not greater than 0
+    else {
+      System.out.println("The number is not positive.");
+    }
+
+    System.out.println("Statement outside if...else block");
+  }
+}
+```
+```java
+OUTPUT:The number is positive.
+Statement outside if...else block
+```
+## 3. Java **`if...else...if`** Statement.
+`if...else...if` ladder, that can be used to execute one block of code among multiple other blocks.
+
+ ```java
+if (condition1) {
+  // codes
+}
+else if(condition2) {
+  // codes
+}
+else if (condition3) {
+  // codes
+}
+.
+.
+else {
+  // codes
+}
+```
+## Program
+```java
+class Main {
+  public static void main(String[] args) {
+
+    int number = 0;
+
+    // checks if number is greater than 0
+    if (number > 0) {
+      System.out.println("The number is positive.");
+    }
+
+    // checks if number is less than 0
+    else if (number < 0) {
+      System.out.println("The number is negative.");
+    }
+    
+    // if both condition is false
+    else {
+      System.out.println("The number is 0.");
+    }
+  }
+}
+```
+```java
+Output:The number is 0.
+```
+### 4. Java **Nested** `if..else` Statement.
+class Main {
+  public static void main(String[] args) {
+
+    // declaring double type variables
+    Double n1 = 1.0, n2 = 3.5, n3 = 0.3, largest;
+
+    // checks if n1 is greater than or equal to n2
+    if (n1 >= n2) {
+
+      // if...else statement inside the if block
+      // checks if n1 is greater than or equal to n3
+      if (n1 >= n3) {
+        largest = n1;
+      }
+
+      else {
+        largest = n3;
+      }
+    } else {
+
+      // if..else statement inside else block
+      // checks if n2 is greater than or equal to n3
+      if (n2 >= n3) {
+        largest = n2;
+      }
+
+      else {
+        largest = n3;
+      }
+    }
+
+    System.out.println("Largest Number: " + largest);
+  }
+}
+```java
+OUTPUT:Largest Number: 3.5
+```
+# **Switch Statement**
+## The `switch` statement allows us to execute a block of code among many alternatives.
+* *Syntax*
+```java
+switch (expression) {
+
+  case value1:
+    // code
+    break;
+  
+  case value2:
+    // code
+    break;
+  
+  ...
+  ...
+  
+  default:
+    // default statements
+  }
+```
+* If `expression` matches with `value1`, the code of case `value1` are executed. Similarly, the code of case `value2` is executed if `expression` matches with `value2`.
+* If there is no match, the code of the `default` case is executed.
+## Progam
+```java
+class Main {
+  public static void main(String[] args) {
+
+    int number = 47;
+    String size;
+
+    // switch statement to check size
+    switch (number) {
+
+      case 29:
+        size = "Small";
+        break;
+
+      case 42:
+        size = "Medium";
+        break;
+
+      // match the value of week
+      case 47:
+        size = "Large";
+        break;
+
+      case 48:
+        size = "Extra Large";
+        break;
+      
+      default:
+        size = "Unknown";
+        break;
+
+    }
+    System.out.println("Size: " + size);
+  }
+}
+```
+```java
+OUTPUT:Size: Large
+```
+## **Break**
+* The `break` statement is used to terminate the `switch-case` statement. If `break`is not used, all the cases after the matching case are also executed.
+* *Syntax*
+```java
+class Main {
+  public static void main(String[] args) {
+
+    int expression = 2;
+
+    // switch statement to check size
+    switch (expression) {
+      case 1:
+        System.out.println("Case 1");
+
+        // matching case
+      case 2:
+        System.out.println("Case 2");
+
+      case 3:
+        System.out.println("Case 3");
+
+      default:
+        System.out.println("Default case");
+    }
+  }
+}
+```
+```java
+Output:
+Case 2
+Case 3      
+Default case
+```
+> * Note: The Java switch statement only valid for:
+> * Primitive data types: byte, short, char, and int
+> * Enumerated types
+> * String Class
+> * Wrapper Classes: Character, Byte, Short, and Integer.
+More.
