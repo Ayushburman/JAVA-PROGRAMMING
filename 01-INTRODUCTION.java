@@ -37,7 +37,7 @@ JVM - Java Virtual Machine  -It is responsible for executing Java bytecode and p
                              bytecode into machine code that can be
                              understood by the underlying operating system and hardware
 
-ClassLoader                 The class loader is responsible for loading Java class files into the JVM.               
+ClassLoader                  The class loader is responsible for loading Java class files into the JVM.               
 Bytecode Verifier            The bytecode verifier checks the integrity and safety of the loaded bytecode before execution.
 Interpreter                  The interpreter is responsible for executing the Java bytecode instructions one by one.
 Just-In-Time (JIT) Compiler  It dynamically analyzes and compiles sections of the bytecode into native machine code for efficient execution.
