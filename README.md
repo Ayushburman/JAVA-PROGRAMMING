@@ -703,3 +703,101 @@ Default case
 > * String Class
 > * Wrapper Classes: Character, Byte, Short, and Integer.
 More.
+# **Loops**
+##  `loops` are used to repeat a block of code.
+### There are 3 types of loops in java.
+* `for loop`
+* `while loop`
+* `do...while loop`
+## Java for Loop
+### Java `for` loop is used to run a block of code for a certain number of times.
+### **Syntax**
+```java
+for (initialExpression; testExpression; updateExpression) {
+    // body of the loop
+}
+```
+**Program**
+```java
+class Main {
+  public static void main(String[] args) {
+
+    int n = 5;
+    // for loop  
+    for (int i = 1; i <= n; ++i) {
+      System.out.println("Git");
+    }
+  }
+}
+```
+```java
+Output:
+Git
+Git
+Git
+Git
+Git
+```
+## **Java while loop**
+### Java `while` loop is used to run a specific code until a certain condition is met.
+**Syntax**
+```java
+while (testExpression) {
+    // body of loop
+}
+```
+**Program**
+```java
+// Program to display numbers from 1 to 5
+class Main {
+  public static void main(String[] args) {
+
+    // declare variables
+    int i = 1, n = 5;
+
+    // while loop from 1 to 5
+    while(i <= n) {
+      System.out.println(i);
+      i++;
+    }
+  }
+}
+```
+```java
+Output:
+1
+2
+3
+4
+5
+```
+## do...while loop
+### It is similar to while loop. However, the body of do...while loop is executed once before the test expression is checked.
+**Syntax**
+```java
+do {
+    // body of loop
+} while(textExpression);
+```
+**Program**
+```java
+class Main {
+  public static void main(String[] args) {
+
+    int i = 1, n = 5;
+
+    // do...while loop from 1 to 5
+    do {
+      System.out.println(i);
+      i++;
+    } while(i <= n);
+  }
+}
+```
+```java
+Output:
+1
+2
+3
+4
+5
