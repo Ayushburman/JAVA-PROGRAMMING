@@ -842,5 +842,94 @@ Output:
 **Syntax**
 ```java
 dataType[] arrayName;
+int[] age;
 ```
+⬇️*Indexing*
+|0  |1  |2  | 
+|---|---|---|
+|**1**|**4**|**6**| 
+
+⬆️*Elements*
+
+**Program**
+```java
+class Main {
+ public static void main(String[] args) {
+  
+   // create an array
+   int[] age = {1, 4, 5, 2, 15};
+
+   // access each array elements
+   System.out.println("Accessing Elements of Array:");
+   System.out.println("First Element: " + age[0]);
+   System.out.println("Second Element: " + age[1]);
+   System.out.println("Third Element: " + age[2]);
+   System.out.println("Fourth Element: " + age[3]);
+   System.out.println("Fifth Element: " + age[4]);
+ }
+}
+```
+```java
+Output:
+Accessing Elements of Array:
+First Element: 1
+Second Element: 4
+Third Element: 5
+Fourth Element: 2
+Fifth Element: 15
+```
+# **2D** Array
+## A 2D array is also known as a `matrix` (a table of rows and columns).
+```java
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+System.out.println(myNumbers[1][2]); 
+```
+```java
+Output:7
+```
+# **3D** Array
+## `3d` array is an array of 2d arrays
+
+|   | C1  | C2  | C3 |
+|---|---|---|---|
+| R1  |0,0|0,1|0,2|
+| R2  |1,0|1,1|1,2|
+| R3  |2,0|2,1|2,2|
+
+**Syntax**
+```java
+String[][][] data = new String[3][4][2];
+```
+**Program**
+```java
+// test is a 3d array
+int[][][] test = {
+        {
+          {1, -2, 3}, 
+          {2, 3, 4}
+        }, 
+        { 
+          {-4, -5, 6, 9}, 
+          {1}, 
+          {2, 3}
+        } 
+};
+```
+```java
+Output:
+1
+-2
+3
+2
+3
+4
+-4
+-5
+6
+9
+1
+2
+3
+```
+
 
