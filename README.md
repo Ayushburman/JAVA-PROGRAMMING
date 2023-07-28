@@ -931,5 +931,47 @@ Output:
 2
 3
 ```
+More.[Array]()
+----
+# **Class**
+### * A `class` is a blueprint for the object. Before we create an object, we first need to define the class.
+### * `Sketch/Prototype` of a House (Details about floors,doors,windows etc.) With the help of this `Sketch/Prototype` we build house.
+### * House is an `Object`.
+* create a class in Java using the `class` keyword
+  
+  **Syntax**
+```java
+class ClassName{
+//fields
+//method
+}
+```
+* Fields represents `Variables`
+* Method represents `State` and `Behavior`
+> **fields** are used to store data,
+> **methods** are used to perform some operations
+```java
+class Bicycle {
 
+  // state or field
+  private int gear = 5;
 
+  // behavior or method
+  public void braking() {
+    System.out.println("Working of Braking");
+  }
+}
+```
+# **Objects**
+### An object is called an *instance* of a class
+### if **Wand** is a **class**
+### Then `ElderWoodWand`,`HollyWoodWand`,`WillowWoodWand` are its objects.
+**Syntax**
+```java
+className object = new className();
+```
+```java
+Weapon Wand  = new Weapon();
+Weapon ElderWoodWand  = new Weapon();
+Weapon HollyWoodWand  = new Weapon();
+```
