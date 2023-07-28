@@ -805,11 +805,11 @@ Output:
 # **Continue**
 ## The `continue` statement skips the current iteration of a loop (for, while, do...while, etc).
 **Syntax**
-```
+```java
 continue;
 ```
 **Program**
-```
+```java
 class Main {
   public static void main(String[] args) {
 
@@ -838,3 +838,9 @@ Output:
 ### More.[Continue](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/50bdc1bd0203ac07913c733313e3f5ad354a5445/CONTINUE.java)
 ------
 # Array
+## An `array` is a collection of similar data type.
+**Syntax**
+```java
+dataType[] arrayName;
+```
+
