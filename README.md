@@ -603,6 +603,8 @@ class Main {
 ```java
 OUTPUT:Largest Number: 3.5
 ```
+### More.[Flow_Control](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f94b4dcfcffa9630ab86be5bc62fc767e26f7ee9/FLOW_CONTROL.java)
+
 # **Switch Statement**
 ## The `switch` statement allows us to execute a block of code among many alternatives.
 * *Syntax*
@@ -666,45 +668,7 @@ class Main {
 ```java
 OUTPUT:Size: Large
 ```
-## **Break**
-* The `break` statement is used to terminate the `switch-case` statement. If `break`is not used, all the cases after the matching case are also executed.
-* *Syntax*
-```java
-class Main {
-  public static void main(String[] args) {
-
-    int expression = 2;
-
-    // switch statement to check size
-    switch (expression) {
-      case 1:
-        System.out.println("Case 1");
-
-        // matching case
-      case 2:
-        System.out.println("Case 2");
-
-      case 3:
-        System.out.println("Case 3");
-
-      default:
-        System.out.println("Default case");
-    }
-  }
-}
-```
-```java
-Output:
-Case 2
-Case 3      
-Default case
-```
-> * Note: The Java switch statement only valid for:
-> * Primitive data types: byte, short, char, and int
-> * Enumerated types
-> * String Class
-> * Wrapper Classes: Character, Byte, Short, and Integer.
-### More.[Flow Control](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/02961bc3525a41e7d27fee7bf8af6eeedfad60ce/FLOW_CONTROL.java)
+### More.[SWITCH](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/a09732a8128d1dcc1d1d7335b3306978e52fb926/SWITCH.java)
 
 # **Loops**
 ##  `loops` are used to repeat a block of code.
@@ -806,7 +770,7 @@ Output:
 5
 ```
 ### More.[Loops](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/a31ed35cca924bccaa4bd4981324b0e89632293b/LOOPS.java)
-# BreaK
+# Break
 ## The `break` statement in Java terminates the loop immediately, and the control of the program moves to the next statement following the loop.
 **Syntax**
 ```java
@@ -836,6 +800,8 @@ Output:
 3
 4
 ```
+### More.[Break](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/681f7e3d5388fda8abc56180c0289e4196ae1825/BREAK.java)
+
 # **Continue**
 ## The `continue` statement skips the current iteration of a loop (for, while, do...while, etc).
 **Syntax**
@@ -869,3 +835,6 @@ Output:
 9
 10
 ```
+### More.[Continue](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/50bdc1bd0203ac07913c733313e3f5ad354a5445/CONTINUE.java)
+------
+# Array
