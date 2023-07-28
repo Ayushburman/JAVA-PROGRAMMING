@@ -564,6 +564,7 @@ class Main {
 Output:The number is 0.
 ```
 ### 4. Java **Nested** `if..else` Statement.
+```java
 class Main {
   public static void main(String[] args) {
 
@@ -598,6 +599,7 @@ class Main {
     System.out.println("Largest Number: " + largest);
   }
 }
+```
 ```java
 OUTPUT:Largest Number: 3.5
 ```
@@ -702,7 +704,8 @@ Default case
 > * Enumerated types
 > * String Class
 > * Wrapper Classes: Character, Byte, Short, and Integer.
-More.
+### More.[Flow Control](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/02961bc3525a41e7d27fee7bf8af6eeedfad60ce/FLOW_CONTROL.java)
+
 # **Loops**
 ##  `loops` are used to repeat a block of code.
 ### There are 3 types of loops in java.
@@ -802,6 +805,8 @@ Output:
 4
 5
 ```
+### More.[Loops](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/a31ed35cca924bccaa4bd4981324b0e89632293b/LOOPS.java)
+# BreaK
 ## The `break` statement in Java terminates the loop immediately, and the control of the program moves to the next statement following the loop.
 **Syntax**
 ```java
@@ -831,4 +836,36 @@ Output:
 3
 4
 ```
-The continue statement skips the current iteration of a loop (for, while, do...while, etc).
+# **Continue**
+## The `continue` statement skips the current iteration of a loop (for, while, do...while, etc).
+**Syntax**
+```
+continue;
+```
+**Program**
+```
+class Main {
+  public static void main(String[] args) {
+
+    // for loop
+    for (int i = 1; i <= 10; ++i) {
+
+      // if value of i is between 4 and 9
+      // continue is executed
+      if (i > 4 && i < 9) {
+        continue;
+      }
+      System.out.println(i);
+    }
+  }
+}
+```
+```java
+Output:
+1
+2
+3
+4
+9
+10
+```
