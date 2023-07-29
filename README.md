@@ -962,6 +962,7 @@ class Bicycle {
   }
 }
 ```
+### More.[CLASS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/62e3680970bd5d85910174b199fb4aaf6536c818/CLASS.java)
 # **Objects**
 ### An object is called an *instance* of a class
 ### if **Wand** is a **class**
@@ -974,4 +975,17 @@ className object = new className();
 Weapon Wand  = new Weapon();
 Weapon ElderWoodWand  = new Weapon();
 Weapon HollyWoodWand  = new Weapon();
+```
+### More.[OBJECTS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/62e3680970bd5d85910174b199fb4aaf6536c818/OBJECTS.java)
+# **Methods**
+### A method is a block of code that performs a specific task.
+**Syntax**
+```java
+returnType methodName() {
+  // method body
+}
+```
+## call **``methods``**
+```java
+addNumbers();
 ```
