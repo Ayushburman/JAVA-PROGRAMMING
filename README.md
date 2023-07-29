@@ -1012,4 +1012,7 @@ class Main {
     System.out.println("Sum is: " + result);
   }
 }
+```java
+Output:Sum is: 40
 ```
+
