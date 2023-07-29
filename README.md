@@ -1015,4 +1015,4 @@ class Main {
 ```java
 Output:Sum is: 40
 ```
-
+### More.[METHOD](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f7c5e448a4a78d7aa910aac68102b03bc4fa9a1d/METHODS.java)
