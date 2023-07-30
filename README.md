@@ -1016,3 +1016,47 @@ class Main {
 Output:Sum is: 40
 ```
 ### More.[METHOD](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f7c5e448a4a78d7aa910aac68102b03bc4fa9a1d/METHODS.java)
+# **Constructors**
+## A `constructor` in Java is similar to a method that is invoked when an object of the class is created.
+**Syntax**
+
+```java
+class Test {
+  Test() {
+    // constructor body
+  }
+}
+```
+####  `Test()` is a constructor.
+```java
+class Main {
+  private String name;
+
+  // constructor
+  Main() {
+    System.out.println("Constructor Called:");
+    name = "Programmer";
+  }
+
+  public static void main(String[] args) {
+
+    // constructor is invoked while
+    // creating an object of the Main class
+    Main obj = new Main();
+    System.out.println("The name is " + obj.name);
+  }
+}
+```
+```java
+Output:
+Constructor Called:
+The name is Programmer
+```
+## **Types of Constructor**
+### In Java, constructors can be divided into 3 types:
+* No-Arg Constructor
+* Parameterized Constructor
+* Default Constructor
+
+### 1.`No-Arg Constructor` If a constructor does not accept any parameters, it is known as a no-argument constructor. 
+
