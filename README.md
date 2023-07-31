@@ -1109,6 +1109,12 @@ class Main {
     // call constructor by passing a single value
     Main obj1 = new Main("Java");
     Main obj2 = new Main("Python");
-    Main obj3 = new Main("C");
+    Main obj3 = new Main("C++");
   }
 }
+```java
+Output:
+Java Programming Language
+Python Programming Language
+C++ Programming Language
+```
