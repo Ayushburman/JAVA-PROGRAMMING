@@ -1060,3 +1060,37 @@ The name is Programmer
 
 ### 1.`No-Arg Constructor` If a constructor does not accept any parameters, it is known as a no-argument constructor. 
 
+```java
+private Constructor() {
+   // body of the constructor
+}
+```
+**Program**
+```
+class Main {
+
+  int i;
+
+  // constructor with no parameter
+  private Main() {
+    i = 5;
+    System.out.println("Constructor is called");
+  }
+
+  public static void main(String[] args) {
+
+    // calling the constructor without any parameter
+    Main obj = new Main();
+    System.out.println("Value of i: " + obj.i);
+  }
+}
+```
+```java
+Output:
+
+Constructor is called
+Value of i: 5
+```
+### 2. Parameterized Constructor
+### A Java constructor can also accept one or more parameters. Such constructors are known as parameterized constructors (constructor with parameters).
+**Program**
