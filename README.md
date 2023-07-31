@@ -1147,4 +1147,39 @@ Default Value:
 a = 0
 b = false
 ```
-### More.[CONSTRUCTOR]()
+### More.[CONSTRUCTOR](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/878644bce90696d4e0cc5508f9c6961199baf52b/CONSTRUCTOR.java)
+## **Strings**
+### In Java, a `string` is a sequence of characters. For example, "hellooo" is a string containing a sequence of characters 'h', 'e', 'l', 'l', 'o',`o` and `o`.
+**Syntax**
+```java
+// create a string
+String type = "Programming";
+```
+```java
+class Main {
+  public static void main(String[] args) {
+    
+    // create strings
+    String first = "Harry";
+    String second = "James";
+    String third = "
+potter";
+
+    // print strings
+    System.out.println(first);   // print Java
+    System.out.println(second);  // print Python
+    System.out.println(third);   // print JavaScript
+  }
+}
+```
+```java
+Output:
+Harry
+James
+potter
+```
+## String Operations
+1. Get `length` of a String.
+## Use `length()`
+
+
