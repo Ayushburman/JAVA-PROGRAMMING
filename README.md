@@ -16,6 +16,7 @@ class HelloWorld {
     }
 }
 ```
+
 # **Output**
 ```
 Hello, World!
@@ -1094,6 +1095,7 @@ Value of i: 5
 ### 2. Parameterized Constructor
 ### A Java constructor can also accept one or more parameters. Such constructors are known as parameterized constructors (constructor with parameters).
 ### **Program**
+```java
 class Main {
 
   String languages;
@@ -1112,9 +1114,37 @@ class Main {
     Main obj3 = new Main("C++");
   }
 }
+```
+
 ```java
 Output:
 Java Programming Language
 Python Programming Language
 C++ Programming Language
 ```
+### 3. Java Default Constructor
+### If we do not create any constructor, the Java compiler automatically create a no-arg constructor during the execution of the program. This constructor is called default constructor.
+```java
+class Main {
+
+  int a;
+  boolean b;
+
+  public static void main(String[] args) {
+
+    // A default constructor is called
+    Main obj = new Main();
+
+    System.out.println("Default Value:");
+    System.out.println("a = " + obj.a);
+    System.out.println("b = " + obj.b);
+  }
+}
+```
+```java
+Output:
+Default Value:
+a = 0
+b = false
+```
+### More.Constructor
