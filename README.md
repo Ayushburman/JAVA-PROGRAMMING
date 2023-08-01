@@ -1225,4 +1225,4 @@ First String: Fantastic
 Second String: Beast    
 Joined String: Fantastic Beast
 ```
-
+More.[STRINGS]()
