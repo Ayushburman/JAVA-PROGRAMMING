@@ -1241,9 +1241,9 @@ class Animal {
 > `Access modifiers` in Java. They are also known as `visibility modifiers.`
 > Note: You cannot set the access modifier of `getters` methods.
 
-* Modifier	Description
-* Default	declarations are visible only within the package (package private)
-* Private	declarations are visible within the class only
-*Protected	declarations are visible within the package or all subclasses
-Public	declarations are visible everywhere
+* `Modifier`| `Description`
+* `Default` | Declarations are visible only within the package (package private).
+* `Private` | Declarations are visible within the class only.
+* `Protected`| Declarations are visible within the package or all subclasses.
+* `Public`   | Declarations are visible everywhere.
 
