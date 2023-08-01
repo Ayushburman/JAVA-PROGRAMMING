@@ -1186,11 +1186,11 @@ class Main {
   public static void main(String[] args) {
 
     // create a string
-    String greet = "Hello! World";
-    System.out.println("String: " + greet);
+    String say = "Hello!";
+    System.out.println("String: " + say);
 
     // get the length of greet
-    int length = greet.length();
+    int length = say.length();
     System.out.println("Length: " + length);
   }
 }
@@ -1198,7 +1198,7 @@ class Main {
 ```java
 Output
 String: Hello! World
-Length: 12
+Length: 05
 ```
 
 
