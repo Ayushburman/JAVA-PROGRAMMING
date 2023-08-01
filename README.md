@@ -1226,3 +1226,24 @@ Second String: Beast
 Joined String: Fantastic Beast
 ```
 More.[STRINGS]()
+# `Access Modifiers`
+##  `Access modifiers` are used to set the accessibility (visibility) of classes, interfaces, variables, methods, constructors, data members, and the setter methods.
+### `Syntax`
+```java
+class Animal {
+    public void method1() {...}
+
+   private void method2() {...}
+}
+```
+* `method1` is public - This means it can be accessed by other classes.
+* `method2` is private - This means it can not be accessed by other classes.
+> `Access modifiers` in Java. They are also known as `visibility modifiers.`
+> Note: You cannot set the access modifier of `getters` methods.
+
+* Modifier	Description
+* Default	declarations are visible only within the package (package private)
+* Private	declarations are visible within the class only
+*Protected	declarations are visible within the package or all subclasses
+Public	declarations are visible everywhere
+
