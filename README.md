@@ -1179,7 +1179,7 @@ James
 potter
 ```
 ## String Operations
-1. Get `length` of a String.
+## 1. Get `length` of a String.
 ## Use `length()`
 ```java
 class Main {
@@ -1200,5 +1200,29 @@ Output
 String: Hello! World
 Length: 05
 ```
+## 2. Join Two Java Strings.
+## using the `concat()` method.
+```java
+class Main {
+  public static void main(String[] args) {
 
+    // first string
+    String first = "Fantastic ";
+    System.out.println("First String: " + first);
+
+    // create second
+    String second = "Beasts";
+    System.out.println("Second String: " + second);
+
+    // join two strings
+    String joinedString = first.concat(second);
+    System.out.println("Joined String: " + joinedString);
+  }
+}
+```
+```java
+First String: Fantastic 
+Second String: Beast    
+Joined String: Fantastic Beast
+```
 
