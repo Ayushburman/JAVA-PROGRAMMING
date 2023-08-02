@@ -1248,3 +1248,20 @@ class Animal {
 * `Public`   | Declarations are visible everywhere.
 
 More.[Access_Modifier]()
+
+# `Recursion` 
+## A method that calls itself is known as a recursive method,This process is known as `recursion.`
+### **Working**
+```java
+public static void main(String[] args) {
+.. .. ..
+recurse()
+.. .. ..
+}
+static void recurse() {
+  .. .. ..
+  recurse()
+  .. .. .. 
+  }
+```
+
