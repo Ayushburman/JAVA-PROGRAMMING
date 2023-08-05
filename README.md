@@ -1250,7 +1250,7 @@ class Animal {
 More.[Access_Modifier]()
 
 # `Recursion` 
-## A method that calls itself is known as a recursive method,This process is known as `recursion.`
+## A method that calls itself is known as a `recursive method`,This process is known as `recursion.`
 ### **Working**
 ```java
 public static void main(String[] args) {
