@@ -1285,5 +1285,15 @@ class Dog extends Animal {
   // methods and fields of Dog
 }
 ```
-
+## **Types of inheritance**
+### **1. Single Inheritance**
+In single inheritance, a single subclass extends from a single superclass. 
+### **2. Multilevel Inheritance**
+In multilevel inheritance, a subclass extends from a superclass and then the same subclass acts as a superclass for another class.
+### **3. Hierarchical Inheritance**
+In hierarchical inheritance, multiple subclasses extend from a single superclass.
+### **4. Multiple Inheritance**
+In multiple inheritance, a single subclass extends from multiple superclasses.
+### **5. Hybrid Inheritance**
+Hybrid inheritance is a combination of two or more types of inheritance.
 
