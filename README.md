@@ -1298,3 +1298,4 @@ In multiple inheritance, a single subclass extends from multiple superclasses.
 Hybrid inheritance is a combination of two or more types of inheritance.
 
 Idont have time for java 
+Taking Break
