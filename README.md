@@ -1365,7 +1365,10 @@ interface Language {
   public void getVersion();
 }
 ```
-
+## Polymorphism
+### Polymorphism is an important concept of object-oriented programming. It simply means more than one form.
+### Why Polymorphism?
+Polymorphism allows us to create consistent code. In the previous example, we can also create different methods: renderSquare() and renderCircle() to render Square and Circle, respectively.
 
 Idont have time for java 
 Taking Break
