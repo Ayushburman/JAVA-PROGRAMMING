@@ -1296,6 +1296,27 @@ In hierarchical inheritance, multiple subclasses extend from a single superclass
 In multiple inheritance, a single subclass extends from multiple superclasses.
 ### **5. Hybrid Inheritance**
 Hybrid inheritance is a combination of two or more types of inheritance.
+### More[]()
+
+## **Abstract Class**
+### The abstract class in Java cannot be instantiated (we cannot create objects of abstract classes). We use the abstract keyword to declare an abstract class. 
+
+```java
+abstract class Language {
+
+  // abstract method
+  abstract void method1();
+
+  // regular method
+  void method2() {
+    System.out.println("This is regular method");
+  }
+}
+```
+```java
+abstract void display();
+```
+
 
 Idont have time for java 
 Taking Break
