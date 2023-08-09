@@ -1316,6 +1316,46 @@ abstract class Language {
 ```java
 abstract void display();
 ```
+## Abstraction
+### The major use of abstract classes and methods is to achieve abstraction in Java.Abstraction is an important concept of object-oriented programming that allows us to hide unnecessary details and only show the needed information.
+
+This allows us to manage complexity by omitting or hiding details with a simpler, higher-level idea.
+```java
+abstract class MotorBike {
+  abstract void brake();
+}
+
+class SportsBike extends MotorBike {
+    
+  // implementation of abstract method
+  public void brake() {
+    System.out.println("SportsBike Brake");
+  }
+}
+
+class MountainBike extends MotorBike {
+    
+  // implementation of abstract method
+  public void brake() {
+    System.out.println("MountainBike Brake");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    MountainBike m1 = new MountainBike();
+    m1.brake();
+    SportsBike s1 = new SportsBike();
+    s1.brake();
+  }
+}
+```
+```java
+Output:
+
+MountainBike Brake
+SportsBike Brake
+```
 
 
 Idont have time for java 
