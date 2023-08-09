@@ -1356,6 +1356,15 @@ Output:
 MountainBike Brake
 SportsBike Brake
 ```
+## Interface
+### An interface is a fully abstract class. It includes a group of abstract methods (methods without a body).We use the interface keyword to create an interface in Java.
+```java
+interface Language {
+  public void getType();
+
+  public void getVersion();
+}
+```
 
 
 Idont have time for java 
