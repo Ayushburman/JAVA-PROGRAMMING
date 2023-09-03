@@ -1384,3 +1384,4 @@ ijk
 7
 mutual exclusion
 no preemption
+hold and wait
