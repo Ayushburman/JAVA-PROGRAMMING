@@ -4,7 +4,7 @@
 * According to Oracle, the company that owns Java, Java runs on 3 billion devices worldwide, which makes Java one of the most popular programming languages.
 
 * **``Platform independent``** - We can write Java code in one platform (operating system) and run on another platform without any modification.
-* **``Object-oriented``** - Java is an object-oriented language. This helps to make our Java code more flexe and reusable.
+* **``Object-oriented``** - Java is an object-oriented language. This helps to make our Java code more flexible and reusable.
 * **``Speed``** - Well optimized Java code is nearly as fast as lower-level languages like C++ and much faster than Python, PHP, etc.
 # **Syntax**
 ```java
