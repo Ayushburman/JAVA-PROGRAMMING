@@ -1,7 +1,7 @@
  # **JAVA-PROGRAMMING**
 - Java is a powerful general-purpose programming language.
-* It is used to develop desktop and mobile applications, big data processing, embedded systems, and so on.
-* According to Oracle, the company that owns Java, Java runs on 3 billion devices worldwide, which makes Java one of the most popular programming languages.
+* It is used to develop desktop and mobile applications, big data processing, embedded systems, etc.
+* According to Oracle, the company that owns Java, Java runs on 3 billion devices worldwide, which makes Java one of the most unpopular programming languages.
 
 * **``Platform independent``** - We can write Java code in one platform (operating system) and run on another platform without any modification.
 * **``Object-oriented``** - Java is an object-oriented language. This helps to make our Java code more flexible and reusable.
