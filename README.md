@@ -1,1415 +1,1038 @@
- # **JAVA-PROGRAMMING**
-- Java is a powerful general-purpose programming language.
-* It is used to develop desktop and mobile applications, big data processing, embedded systems, etc.
-* According to Oracle, the company that owns Java, Java runs on 3 billion devices worldwide, which makes Java one of the most popular programming languages.
+# JAVA · PROGRAMMING
 
-* **``Platform independent``** - We can write Java code in one platform (operating system) and run on another platform without any modification.
-* **``Object-oriented``** - Java is an object-oriented language. This helps to make our Java code more flexible and reusable.
-* **``Speed``** - Well optimized Java code is nearly as fast as lower-level languages like C++ and much faster than Python, PHP, etc.
-# **Syntax**
+> A structured reference guide for learning Java — from fundamentals to object-oriented design.
+
+```
+Language   : Java SE 17+
+Type       : General Purpose, Object-Oriented
+Runs On    : JVM (Write Once, Run Anywhere)
+```
+
+---
+
+## § Table of Contents
+
+```
+01  Introduction & Architecture
+02  Syntax & Hello World
+03  Variables
+04  Literals
+05  Data Types
+06  Operators
+07  Input / Output
+08  Expressions, Statements & Blocks
+09  Comments
+10  Flow Control
+11  Switch Statement
+12  Loops
+13  Break & Continue
+14  Arrays
+15  OOP — Classes & Objects
+16  Methods
+17  Constructors
+18  Strings
+19  Access Modifiers
+20  Recursion
+21  Inheritance & Abstract Classes
+22  Interfaces
+23  Polymorphism
+```
+
+---
+
+## 01 · Introduction & Architecture
+
+Java is a general-purpose, class-based, strongly-typed programming language.  
+It powers desktop applications, mobile apps (Android), web backends, big data pipelines, and embedded systems.
+
+**Core Characteristics**
+
+| Property            | Description                                                  |
+|---------------------|--------------------------------------------------------------|
+| Platform Independent | Compiled to bytecode; runs on any JVM regardless of OS      |
+| Object-Oriented     | Models programs as interacting objects                       |
+| Strongly Typed      | All variables must be declared with a type                   |
+| Automatic Memory    | Garbage collector manages heap allocation                    |
+| Speed               | Near C++ performance with JIT compilation                    |
+
+### JVM · JRE · JDK
+
+```
+JDK  (Java Development Kit)
+ └─  JRE  (Java Runtime Environment)
+      └─  JVM  (Java Virtual Machine)
+           └─  Class Libraries
+      └─  Compiler, Debugger, Tools
+```
+
+**Execution Pipeline**
+
+```
+.java source  →  javac compiler  →  .class bytecode  →  JVM  →  Native Machine Code  →  Output
+```
+
+- **JVM** — Translates bytecode to platform-native instructions at runtime via JIT.
+- **JRE** — Contains the JVM + standard class libraries. Required to *run* Java programs.
+- **JDK** — Full development kit (JRE + compiler + debugger). Required to *write* Java programs.
+
+---
+
+## 02 · Syntax & Hello World
+
 ```java
-// Your First Program
+// HelloWorld.java
 
 class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, World!"); 
+        System.out.println("Hello, World!");
     }
 }
 ```
 
-# **Output**
+**Output**
+
 ```
 Hello, World!
 ```
-## Let's Break it DOWN!
-**1.** ``` // Your First Program ```  In Java anything that starting with ```//``` are called **'comments'**,These are basically used for basic understanding and readability and had nothing to do with your code,A compiler ignores **COMMENTS**.<br>
-**2.** ``` class HelloWorld { ``` In Java every Program/Application starts with class, ```HelloWorld``` is name of your class<br>
-**3.** ```public static void main(String[] args) { ... }``` This is the main method. Every application in Java must contain the main method. The Java compiler starts executing the code from the main method.<br>
-```public``` is an access modifier, It is a entry point of java program.<br>
-```static``` keyword is used to declare that the main method belongs to the class itself rather than an instance of the class.<br>
-```void``` in Java is used as a return type for methods and indicates that the method does not return any value.<br>
- ```main``` method is responsible for executing the program's logic, but it doesn't produce a result that needs to be returned.<br>
- ```String[] args``` It allows you to pass command-line arguments to your Java program when running it.<br>
-  ```args```variable is an array of strings that holds the arguments provided when starting the program from the command line.<br>
-  ```System.out.println("Hello, World!");```is a print statement. It prints the text```Hello, World!```.<br>
-  
 
-## Java JDK, JRE and JVM
-**1.** ```JVM (Java Virtual Machine)```🧰is a critical component of the Java Runtime Environment (JRE) that enables Java bytecode to be executed on different platforms.<br>
-**WORKING:** When you run the Java program, Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine code (set of instructions that a computer's CPU executes directly)<br>
-```JAVA PROGRAM```➡️```JAVA BYTECODE```➡️```MACHINE CODE```➡️```OUTPUT```<br>
+**Breakdown**
 
-**2.** ```What is JRE?```
-JRE (Java Runtime Environment) is a software package that provides Java class libraries, Java Virtual Machine (JVM), and other components that are required to run Java applications.<br>
-JRE is the superset of JVM.<br>
+| Token                        | Role                                                                      |
+|------------------------------|---------------------------------------------------------------------------|
+| `// comment`                 | Single-line comment — ignored by the compiler                             |
+| `class HelloWorld`           | Every Java program lives inside a class                                   |
+| `public`                     | Access modifier — entry point must be visible to the JVM                  |
+| `static`                     | Method belongs to the class, not an instance                              |
+| `void`                       | Return type — `main` returns nothing                                      |
+| `main`                       | Reserved entry point — JVM starts execution here                          |
+| `String[] args`              | Command-line arguments passed as a string array                           |
+| `System.out.println(...)`    | Prints to stdout, appends newline                                         |
 
-|            | ```JRE```  |            |
-|------------|------------|------------|
-| ```JVM```  |   ```+```  |  ```CLASS LIB.``` |
+---
 
-**3.** ```What is JDK?``` (Java Development Kit) is a software development kit required to develop applications in Java. When you download JDK, JRE is also downloaded with it.<br>
+## 03 · Variables
 
-```JDK``` ----> ```JRE``` ----> ```JVM``` ```+``` ```CLASS LIB.```---->```compiler```,```debugger``` etc.
-
- ### More.[INTRODUCTION](01-INTRODUCTION)
- 
- ## VARIABLES
-
-### Java Variables
-A ```variable``` is a location in memory (storage area) to hold data.
-To indicate the storage area, each variable should be given a unique name ```(identifier)```.
-```java
-int Age = 80;
-```
-```Age``` is a Variable and ```int``` is a Data Type,```80``` is Value assigned to ```Age```.
-```int``` Data type refers to that it can only hold Integer type only
-```bash
-Rules for Naming Variables in Java:
->1. Java is case sensitive. Hence, `age` and `AGE` are two different variables.
-int age = 50;
-int age = 10;
-
-System.out.println(age);  // prints 24
-System.out.println(AGE);  // prints 25
-
->2. Variables must start with either a `letter` or an `_underscore` or a `$dollar`.
-int age;  // valid name and good practice
-int _age;  // valid but it is a bad practice
-int $age;  // valid but it is a bad practice
-
->3. Variable names cannot start with numbers 1,2....
-int 1age;  // invalid variables
-
->4. Variable names cannot use whitespace.
-int my age;  // invalid variables
- ```
-
-### There are `4` types of variables in Java programming language:
-* Local Variables `A variable declared inside the body of the method is called local variable. `           
-* Instance Variables `A variable declared inside the class but outside the body of the method, is called an instance variable. It is not declared as static.`
-* Class Variables (Static Fields) `A variable that is declared as static is called a static variable.`
-* Parameters `A parameter is a variable that is passed to a method when the method is called.`
-
-
-### More.[VARIABLES](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/73668d87dd759660010b1dd97df5da1a875116c4/VARIABLES%20%26%20LITERALS.java)
-
-## LITERALS
-### Java Literals
-`Literals` are data used for representing fixed values.
- ```java
-int a = 10;
-float b = 3.14;
-char c = 'F';
-```
-Here, `10`, `3.14`, and `'F'` are `literals`.<br>
-Types of `Literals` in java: `Integer`,`Boolean`,`Float`,`Character`,`String`.<br>
-### Integer 
-An `integer` literal is a numeric value, without any fractional or exponential part. 
-There are `4` types of `integer` literals in Java:
-```java
-// octal 
-int octalNumber = 027;
-
-// decimal
-int decNumber = 3;
-
-// hexadecimal 
-int hexNumber = 0x2F; // 0x represents hexadecimal
-// binary
-int binNumber = 0b10010; // 0b represents binary
-
-```
-**Tip** In Java, binary starts with `0b`, octal starts with `0`, and hexadecimal starts with `0x`.
-### Boolean
-`Boolean` literals are used to initialize boolean data types. They can store two values: `true` and `false`.
-```java
-boolean Question1 = false;
-boolean Question2 = true;
-```
-### Float
-A numeric literal that has either a `fractional` form or an `exponential` form.
-```java
-double myDouble = 3.4; //double used for much larger numbers
-float myFloat = 3.4F;
-```
-### Character
-`Character` literals are unicode character enclosed inside single quotes.
-```java
-char letter = 'a';
-```
-### String
-A `string` literal is a sequence of characters enclosed inside double-quotes("").
-```java
-String str1 = "GitHub";
-String str2 = "TeamHub";
-```
-### More.[LITERALS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/73668d87dd759660010b1dd97df5da1a875116c4/VARIABLES%20%26%20LITERALS.java)
-
-## Data Types
-
-### Data Types 
-Is `type` of `data` that can be stored inside variables in Java.<br>
-There are **`8`** data types **predefined** in Java, known as *primitive data types.*
-
-**`boolean`**,**`byte`**,**`short`**,**`int`**,**`long`**,**`double`**,**`float`**,**`char`**
-### 8 Primitive Data Types
-### 1. **boolean type**
-* The *boolean* data type has two possible values, either `true` or `false`.
-> Default value: `false`.
-```java
-boolean answer = true;
-System.out.println(answer);    // prints true
-```
-### 2. **byte type**
-* The byte data type can have values from `-128` to `127` (8-bit signed two's complement integer).
-* If it's certain that the value of a variable will be within -128 to 127, then it is used instead of int to save memory.
-> Default value: 0
+A variable is a named memory location that holds a value of a specific type.
 
 ```java
-byte range;
-range = 124;
-System.out.println(range);  // prints 124
+int age = 25;        // type  identifier  value
 ```
-### 3. **short type**
-* The short data type in Java can have values from -32768 to 32767 (16-bit signed two's complement integer).
-* If it's certain that the value of a variable will be within -32768 and 32767, then it is used instead of other integer data types (int, long).
-> Default value: 0
+
+**Naming Rules**
+
+```
+[✓]  age        // lowercase, descriptive — preferred
+[✓]  _count     // underscore prefix — valid, discouraged
+[✓]  $price     // dollar prefix — valid, discouraged
+[✗]  1value     // cannot start with a digit
+[✗]  my value   // no whitespace
+[!]  Age ≠ age  // Java is case-sensitive
+```
+
+**Variable Scope Types**
+
+| Type             | Declared                              | Access                    |
+|------------------|---------------------------------------|---------------------------|
+| Local            | Inside a method body                  | Within that method only   |
+| Instance         | Inside class, outside methods         | Per-object (non-static)   |
+| Static / Class   | With `static` keyword inside class    | Shared across all objects |
+| Parameter        | In method signature                   | Within that method only   |
 
 ```java
-short temperature;
-temperature = -200;
-System.out.println(temperature);  // prints -200
-```
-### 4. **int type**
-* The `int` data type can have values from  -2<sup>31</sup> to -2<sup>31</sup>-1 (32-bit signed two's complement integer).
-> Default value: 0
-```java
-int range = -4250000;
-System.out.println(range);  // print -4250000
-```
+class Counter {
+    static int total = 0;        // static variable
+    int count;                   // instance variable
 
-## 5. **long type**
-* The `long` data type can have values from `-263` to `263-1` (64-bit signed two's complement integer).
-* If you are using Java 8 or later, you can use an unsigned 64-bit integer with a minimum value of `0` and a maximum value of `264-1`.
-> Default value: 0
-```java
-long range = -42332200000L;
-System.out.println(range);    // prints -42332200000
-```
->Notice, the use of `L` at the end of `-42332200000`. This represents that it's an `integer` of the `long` type.
-
-## 6. **double type**
-* The `double` data type is a `double-precision` 64-bit floating-point.
-* It should never be used for precise values such as `currency`.
-> Default value: 0.0 (0.0d)
-```java
-double number = -42.3;
-System.out.println(number);  // prints -42.3
-```
-## 7. **float type**
-* The float data type is a single-precision 32-bit floating-point. Learn more about single-precision and double-precision floating-point if you are interested.
-* It should never be used for precise values such as currency.
-> Default value: 0.0 (0.0f)
-```java
-float number = -42.3f;
-System.out.println(number);  // prints -42.3
-```
-## 8. **char type**
-* It's a 16-bit Unicode character.
-* The minimum value of the char data type is '\u0000' (0) and the maximum value of the is '\uffff'.
-> Default value: '\u0000'
-```java
-char letter = '\u0051';
-System.out.println(letter);  // prints Q
-```
-### More. [DATA TYPES](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/e17be1a85679a1bdaa0c939bb4a64034f101d8ed/DATA%20TYPES)
-# Operators
-### Operators
-Operators are symbols that perform operations on variables and values. 
-`Operators` in Java can be classified into `5` types:
-* Arithmetic Operators
-* Assignment Operators
-* Relational Operators
-* Logical Operators
-* Unary Operators
-* Bitwise Operators
-
-**1.** Java **Arithmetic** Operators:-
-**`Arithmetic`** operators are used to perform `arithmetic` operations on variables and data.
-```java
-a + b;
-```
-|Operators|Operations|  
-|----|----|
-| +|Addition|  
-| -|Subtraction|   
-| *|Multiplication|
-| /|Division|
-| %|Modulo|
-
-**2.** Java **Assingment** Operators:-<br>
-**`Assignment`** operators are used in Java to assign values to variables.
-```java
-int age;
-age = 5;
-```
-|Operators|Operations|  
-|----|----|
-|=| Assingment |  
-|+=|Addition Assingment|   
-|-=|Subtraction Assingment|
-|*=|Multiplication Assingment|
-|/=|Division Assingment|
-|%=|Modulo Assingment|
-
-**3.** Java **Relational** Operators:-
-**`Relational`** operators are used to check the relationship between two operands
-```java
-// check if a is less than b
-a < b;
-```
-|Operators|Operations|  
-|----|----|
-|==| Is Equal to |  
-|!=| Is Not Equal to|   
-|>|Greater Than|
-|<|Less Than|
-|>=|Greater Than or Equal to|
-|<=|Less Than or Equal to|
-
-**4**. Java **Logical** Operators:-
-**`Logical`** operators are used to check whether an expression is `true` or `false`. They are used in decision making.
-
-|Operators|Operations|  
-|----|----|
-|&&| AND |  
-|\|\|| OR |  
-|!| NOT |
-
-**5**. Java **Unary** Operators:-
-**`Unary`** operators are used with only one operand.
-For example, `++` is a unary operator that increases the value of a variable by `1`. That is, `++1` will return `2`.
-
-|Operators|Operations|  
-|----|----|
-|+| Unary plus |  
-|-| Unary minus|   
-|++|Increment Operator|
-|--|Decrement Operator|
-|!|Logical Compliment|
-
-**6**. Java **Bitwise** Operators:-
-**`Bitwise`** operators in Java are used to perform operations on individual bits.
-
-|Operator|Description|
-|----|----|
-|~| Bitwise Complement|
-|<<|Left Shift|
-|>>|Right Shift|
-|>>>|Unsigned Right Shift|
-|&|Bitwise AND|
-|^|Bitwise exclusive OR|
-
-> ⭐ Java `instanceof` Operator
->> The `instanceof` operator checks whether an object is an instanceof a particular class.
- ```java
-      // checks if str is an instance of
-    // the String class
-    result = str instanceof String;
-    System.out.println("Is str an object of String? " + result);
-  }
+    void increment(int amount) { // 'amount' is a parameter
+        int step = 1;            // local variable
+        count += step * amount;
+        total++;
+    }
 }
 ```
-> Output:  Is str an object of String? true
 
-> ⭐Java `Ternary` Operator
->> The `ternary` operator (conditional operator) is shorthand for the if-then-else statement.
-```java
-//variable = Expression ? expression1 : expression2
-// ternary operator
-result = (februaryDays == 28) ? "Not a leap year" : "Leap year";
-System.out.println(result);
-```
-> Output: Leap year<br>
+→ Source: [VARIABLES & LITERALS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/73668d87dd759660010b1dd97df5da1a875116c4/VARIABLES%20%26%20LITERALS.java)
 
-### More.[OPERATORS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f1e4315bdc6513efbf77f513434aeacdf6904624/OPERATORS)
+---
 
-# Java Basic Input and Output
-## Java Output
-```java
-System.out.println(); or
+## 04 · Literals
 
-System.out.print(); or
-
-System.out.printf();
-
-```
-* **`System`** is a `class`
-* **`out`** is a `public`,`static` field.
-```java
- System.out.println("I Love Harry Potter Books!.");   
-```
-> Output:I Love Harry Potter Books!<br>
-
-Difference between  `println()`, `print()`and `printf()`.
-* **`print()`** - It prints string without adding newline.
-* **`println()`** - It prints strings, Then the cursor moves to the beginning of the next line.
-* **`printf()`** - It provides string formatting (similar to printf in C/C++ programming).
+Literals are fixed, hard-coded values written directly in source code.
 
 ```java
-System.out.println("Ayush");//println
-System.out.println("Burman");
-System.out.print("Ayush");//print
-System.out.print("Burman");
+int    a = 10;      // integer literal
+float  b = 3.14f;   // float literal
+char   c = 'F';     // character literal
 ```
+
+**Integer Literals**
+
 ```java
-Output:
-Ayush
-Burman
-Ayush Burman
+int decimal = 42;           // base 10
+int octal   = 052;          // base 8  — prefix 0
+int hex     = 0x2A;         // base 16 — prefix 0x
+int binary  = 0b00101010;   // base 2  — prefix 0b
 ```
-## Java Input
-* Get input from user using the object of **`Scanner`** class.
-* To use the object of **`Scanner`**, we need to import `java.util.Scanner` package.
+
+**Boolean Literals**
+
+```java
+boolean flag = true;
+boolean done = false;
+```
+
+**Float Literals**
+
+```java
+float  f = 3.14f;       // suffix 'f' required for float
+double d = 3.14;        // default floating-point type
+double e = 1.5e10;      // scientific notation
+```
+
+**Character & String Literals**
+
+```java
+char   ch  = 'A';             // single quotes
+String str = "Hello, Java";   // double quotes
+```
+
+→ Source: [VARIABLES & LITERALS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/73668d87dd759660010b1dd97df5da1a875116c4/VARIABLES%20%26%20LITERALS.java)
+
+---
+
+## 05 · Data Types
+
+Java has **8 primitive data types** and a rich set of reference types.
+
+### Primitive Types
+
+| Type      | Size     | Range / Notes                              | Default  |
+|-----------|----------|--------------------------------------------|----------|
+| `boolean` | 1 bit    | `true` / `false`                           | `false`  |
+| `byte`    | 8 bits   | -128 to 127                                | `0`      |
+| `short`   | 16 bits  | -32,768 to 32,767                          | `0`      |
+| `int`     | 32 bits  | -2³¹ to 2³¹-1                             | `0`      |
+| `long`    | 64 bits  | -2⁶³ to 2⁶³-1 — suffix `L`               | `0L`     |
+| `float`   | 32 bits  | Single-precision IEEE 754 — suffix `f`     | `0.0f`   |
+| `double`  | 64 bits  | Double-precision IEEE 754                  | `0.0d`   |
+| `char`    | 16 bits  | Unicode `\u0000` to `\uffff`               | `\u0000` |
+
+```java
+byte   b = 100;
+short  s = 30000;
+int    i = 2_000_000;       // underscores improve readability
+long   l = 9_000_000_000L;
+float  f = 3.14f;
+double d = 3.141592653589;
+char   c = '\u0041';        // prints 'A'
+boolean flag = true;
+```
+
+> **Note:** Use `double` over `float` for precision. Never use floating-point types for currency — use `BigDecimal`.
+
+→ Source: [DATA TYPES](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/e17be1a85679a1bdaa0c939bb4a64034f101d8ed/DATA%20TYPES)
+
+---
+
+## 06 · Operators
+
+### Arithmetic
+
+| Operator | Operation      |
+|----------|----------------|
+| `+`      | Addition       |
+| `-`      | Subtraction    |
+| `*`      | Multiplication |
+| `/`      | Division       |
+| `%`      | Modulo         |
+
+### Assignment
+
+| Operator | Equivalent     |
+|----------|----------------|
+| `=`      | Assign         |
+| `+=`     | Add & assign   |
+| `-=`     | Sub & assign   |
+| `*=`     | Mul & assign   |
+| `/=`     | Div & assign   |
+| `%=`     | Mod & assign   |
+
+### Relational
+
+| Operator | Meaning               |
+|----------|-----------------------|
+| `==`     | Equal to              |
+| `!=`     | Not equal to          |
+| `>`      | Greater than          |
+| `<`      | Less than             |
+| `>=`     | Greater than or equal |
+| `<=`     | Less than or equal    |
+
+### Logical
+
+| Operator | Meaning |
+|----------|---------|
+| `&&`     | AND     |
+| `\|\|`   | OR      |
+| `!`      | NOT     |
+
+### Unary
+
+| Operator | Meaning             |
+|----------|---------------------|
+| `+`      | Unary plus          |
+| `-`      | Unary minus         |
+| `++`     | Pre/post increment  |
+| `--`     | Pre/post decrement  |
+| `!`      | Logical complement  |
+
+### Bitwise
+
+| Operator | Meaning              |
+|----------|----------------------|
+| `&`      | Bitwise AND          |
+| `\|`     | Bitwise OR           |
+| `^`      | Bitwise XOR          |
+| `~`      | Bitwise complement   |
+| `<<`     | Left shift           |
+| `>>`     | Right shift          |
+| `>>>`    | Unsigned right shift |
+
+### Special Operators
+
+**Ternary (conditional shorthand)**
+```java
+int days = 2024;
+String year = (days % 4 == 0) ? "Leap year" : "Not a leap year";
+```
+
+**instanceof**
+```java
+String name = "Java";
+boolean result = name instanceof String;  // true
+```
+
+→ Source: [OPERATORS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f1e4315bdc6513efbf77f513434aeacdf6904624/OPERATORS)
+
+---
+
+## 07 · Input / Output
+
+### Output Methods
+
+| Method              | Behavior                                         |
+|---------------------|--------------------------------------------------|
+| `System.out.print`  | Prints without trailing newline                  |
+| `System.out.println`| Prints, then moves cursor to next line           |
+| `System.out.printf` | Formatted output (C-style format specifiers)     |
+
+```java
+System.out.println("Line 1");
+System.out.print("A");
+System.out.print("B");           // outputs: AB (same line)
+System.out.printf("Pi = %.2f%n", 3.14159);  // Pi = 3.14
+```
+
+### Input via Scanner
+
 ```java
 import java.util.Scanner;
-```
-```java
-// create an object of Scanner
-Scanner input = new Scanner(System.in);
 
-// take input from the user
-int number = input.nextInt();
-```
-```java
-import java.util.Scanner;
-
-class Input {
+class InputDemo {
     public static void main(String[] args) {
-    	
-        Scanner input = new Scanner(System.in);
-    	
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+
         System.out.print("Enter your age: ");
-        int number = input.nextInt();
-        System.out.println("You entered " + number);
+        int age = sc.nextInt();
 
-        // closing the scanner object
-        input.close();
+        System.out.println("Hello, " + name + ". Age: " + age);
+        sc.close();
     }
 }
 ```
-```java
-Output:
-Enter your age: 23
-You entered 23
-```
-### More.[INPUT OUTPUT](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f9600f8e4849baeaf3ed958f5ba6032147aaca3a/INPUT%20OUTPUT)
 
-# **Expressions** 
-* A Java `expression` consists of `variables`, `operators`, `literals`, and `method calls`.
+**Common Scanner Methods**
+
+| Method          | Reads             |
+|-----------------|-------------------|
+| `nextInt()`     | Integer           |
+| `nextDouble()`  | Double            |
+| `next()`        | Single word       |
+| `nextLine()`    | Full line         |
+| `nextBoolean()` | Boolean           |
+
+→ Source: [INPUT OUTPUT](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f9600f8e4849baeaf3ed958f5ba6032147aaca3a/INPUT%20OUTPUT)
+
+---
+
+## 08 · Expressions, Statements & Blocks
+
 ```java
-int marks; 
-marks = 90;
-```
-```bash
-> marks = 90 is a Expression.
-```
-# **Statements**
-* Statement is a complete unit of execution.
-```bash
-int sum = 9*5;
-```
-```java
-// expression
-number = 10
-// statement
-number = 10;
-```
-# **Blocks**
-A `block` is a group of statements (zero or more) that is enclosed in curly braces `{ }`.
-```java
- String band = "Beatles";
-    	
-        if (muggle == "dudley") { // start of block
-            System.out.print("Hey ");
-            System.out.print("Harry!");
-        } // end of block
-    }
+// Expression — a combination of values, variables, operators
+marks = 90
+
+// Statement — a complete executable unit (terminated with ;)
+int marks = 90;
+
+// Block — zero or more statements enclosed in braces
+if (condition) {
+    int x = 10;   // statement inside a block
+    x++;
 }
 ```
-```java
-Output: Hey Harry!
-```
-# **Comments**
-`Comments` are a portion of the program that are completely ignored by Java compilers.
-*syntax* = `//`
 
-**Types of Comments in Java**
-There are two types of comments:
-* single-line comment `//`
-* multi-line comment `/***/`
+---
+
+## 09 · Comments
+
 ```java
-//This is a single line comment.
-/*This is
- a Multi line
- Comment
+// Single-line comment
+
+/*
+   Multi-line comment
+   Spans multiple lines
 */
-```
-# **Java Flow Control**
-* controls the *flow* of **code**.
-  
-### 1.Java **`if`** Statement.
-```java
-if (condition) {
-  // statements
-}
-```
-### Program
-```java
-class IfStatement {
-  public static void main(String[] args) {
 
-    int number = 10;
-
-    // checks if number is less than 0
-    if (number < 0) {
-      System.out.println("The number is negative.");
-    }
-
-    System.out.println("Statement outside if block");
-  }
-}
+/**
+ * Javadoc comment
+ * Used to generate API documentation
+ * @param args command-line arguments
+ */
+public static void main(String[] args) { }
 ```
-```java
-OUTPUT:Statement outside if block
-```
-### 2. Java **`if...else`** Statement.
+
+> Comments are stripped at compile time — they have zero effect on bytecode.
+
+---
+
+## 10 · Flow Control
+
+### `if`
 
 ```java
 if (condition) {
-  // codes in if block
-}
-else {
-  // codes in else block
+    // executes if condition is true
 }
 ```
-### Program
+
+### `if...else`
+
 ```java
-class Main {
-  public static void main(String[] args) {
-    int number = 10;
-
-    // checks if number is greater than 0
-    if (number > 0) {
-      System.out.println("The number is positive.");
-    }
-    
-    // execute this block
-    // if number is not greater than 0
-    else {
-      System.out.println("The number is not positive.");
-    }
-
-    System.out.println("Statement outside if...else block");
-  }
+if (number > 0) {
+    System.out.println("Positive");
+} else {
+    System.out.println("Non-positive");
 }
 ```
+
+### `if...else if...else`
+
 ```java
-OUTPUT:The number is positive.
-Statement outside if...else block
+if (score >= 90)       grade = "A";
+else if (score >= 80)  grade = "B";
+else if (score >= 70)  grade = "C";
+else                   grade = "F";
 ```
-## 3. Java **`if...else...if`** Statement.
-`if...else...if` ladder, that can be used to execute one block of code among multiple other blocks.
 
- ```java
-if (condition1) {
-  // codes
-}
-else if(condition2) {
-  // codes
-}
-else if (condition3) {
-  // codes
-}
-.
-.
-else {
-  // codes
-}
-```
-## Program
+### Nested `if`
+
 ```java
-class Main {
-  public static void main(String[] args) {
-
-    int number = 0;
-
-    // checks if number is greater than 0
-    if (number > 0) {
-      System.out.println("The number is positive.");
-    }
-
-    // checks if number is less than 0
-    else if (number < 0) {
-      System.out.println("The number is negative.");
-    }
-    
-    // if both condition is false
-    else {
-      System.out.println("The number is 0.");
-    }
-  }
+if (n1 >= n2) {
+    largest = (n1 >= n3) ? n1 : n3;
+} else {
+    largest = (n2 >= n3) ? n2 : n3;
 }
 ```
-```java
-Output:The number is 0.
-```
-### 4. Java **Nested** `if..else` Statement.
-```java
-class Main {
-  public static void main(String[] args) {
 
-    // declaring double type variables
-    Double n1 = 1.0, n2 = 3.5, n3 = 0.3, largest;
+→ Source: [FLOW\_CONTROL.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f94b4dcfcffa9630ab86be5bc62fc767e26f7ee9/FLOW_CONTROL.java)
 
-    // checks if n1 is greater than or equal to n2
-    if (n1 >= n2) {
+---
 
-      // if...else statement inside the if block
-      // checks if n1 is greater than or equal to n3
-      if (n1 >= n3) {
-        largest = n1;
-      }
+## 11 · Switch Statement
 
-      else {
-        largest = n3;
-      }
-    } else {
+Executes one branch from multiple alternatives based on a matched value.
 
-      // if..else statement inside else block
-      // checks if n2 is greater than or equal to n3
-      if (n2 >= n3) {
-        largest = n2;
-      }
-
-      else {
-        largest = n3;
-      }
-    }
-
-    System.out.println("Largest Number: " + largest);
-  }
-}
-```
-```java
-OUTPUT:Largest Number: 3.5
-```
-### More.[Flow_Control](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f94b4dcfcffa9630ab86be5bc62fc767e26f7ee9/FLOW_CONTROL.java)
-
-# **Switch Statement**
-## The `switch` statement allows us to execute a block of code among many alternatives.
-* *Syntax*
 ```java
 switch (expression) {
-
-  case value1:
-    // code
-    break;
-  
-  case value2:
-    // code
-    break;
-  
-  ...
-  ...
-  
-  default:
-    // default statements
-  }
-```
-* If `expression` matches with `value1`, the code of case `value1` are executed. Similarly, the code of case `value2` is executed if `expression` matches with `value2`.
-* If there is no match, the code of the `default` case is executed.
-## Progam
-```java
-class Main {
-  public static void main(String[] args) {
-
-    int number = 47;
-    String size;
-
-    // switch statement to check size
-    switch (number) {
-
-      case 29:
-        size = "Small";
+    case value1:
+        // code
         break;
-
-      case 42:
-        size = "Medium";
+    case value2:
+        // code
         break;
-
-      // match the value of week
-      case 47:
-        size = "Large";
-        break;
-
-      case 48:
-        size = "Extra Large";
-        break;
-      
-      default:
-        size = "Unknown";
-        break;
-
-    }
-    System.out.println("Size: " + size);
-  }
+    default:
+        // fallback if no case matches
 }
 ```
-```java
-OUTPUT:Size: Large
-```
-### More.[SWITCH](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/a09732a8128d1dcc1d1d7335b3306978e52fb926/SWITCH.java)
 
-# **Loops**
-##  `loops` are used to repeat a block of code.
-### There are 3 types of loops in java.
-* `for loop`
-* `while loop`
-* `do...while loop`
-## Java for Loop
-### Java `for` loop is used to run a block of code for a certain number of times.
-### **Syntax**
 ```java
-for (initialExpression; testExpression; updateExpression) {
-    // body of the loop
+int day = 3;
+String name;
+
+switch (day) {
+    case 1:  name = "Monday";    break;
+    case 2:  name = "Tuesday";   break;
+    case 3:  name = "Wednesday"; break;
+    default: name = "Unknown";
+}
+// name → "Wednesday"
+```
+
+> **Java 14+** supports switch expressions with arrow syntax:
+> ```java
+> String name = switch (day) {
+>     case 1 -> "Monday";
+>     case 2 -> "Tuesday";
+>     default -> "Unknown";
+> };
+> ```
+
+→ Source: [SWITCH.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/a09732a8128d1dcc1d1d7335b3306978e52fb926/SWITCH.java)
+
+---
+
+## 12 · Loops
+
+### `for` — known iteration count
+
+```java
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
 }
 ```
-**Program**
-```java
-class Main {
-  public static void main(String[] args) {
 
-    int n = 5;
-    // for loop  
-    for (int i = 1; i <= n; ++i) {
-      System.out.println("Git");
-    }
-  }
+### `while` — condition-driven
+
+```java
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
 }
 ```
-```java
-Output:
-Git
-Git
-Git
-Git
-Git
-```
-## **Java while loop**
-### Java `while` loop is used to run a specific code until a certain condition is met.
-**Syntax**
-```java
-while (testExpression) {
-    // body of loop
-}
-```
-**Program**
-```java
-// Program to display numbers from 1 to 5
-class Main {
-  public static void main(String[] args) {
 
-    // declare variables
-    int i = 1, n = 5;
+### `do...while` — executes body at least once
 
-    // while loop from 1 to 5
-    while(i <= n) {
-      System.out.println(i);
-      i++;
-    }
-  }
-}
-```
 ```java
-Output:
-1
-2
-3
-4
-5
-```
-## do...while loop
-### It is similar to while loop. However, the body of do...while loop is executed once before the test expression is checked.
-**Syntax**
-```java
+int i = 1;
 do {
-    // body of loop
-} while(textExpression);
+    System.out.println(i);
+    i++;
+} while (i <= 5);
 ```
-**Program**
+
+### Enhanced `for` (for-each) — iterating collections/arrays
+
 ```java
-class Main {
-  public static void main(String[] args) {
-
-    int i = 1, n = 5;
-
-    // do...while loop from 1 to 5
-    do {
-      System.out.println(i);
-      i++;
-    } while(i <= n);
-  }
+int[] nums = {10, 20, 30};
+for (int n : nums) {
+    System.out.println(n);
 }
 ```
-```java
-Output:
-1
-2
-3
-4
-5
-```
-### More.[Loops](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/a31ed35cca924bccaa4bd4981324b0e89632293b/LOOPS.java)
-# Break
-## The `break` statement in Java terminates the loop immediately, and the control of the program moves to the next statement following the loop.
-**Syntax**
-```java
-break;
-```
-**Program**
-```java
-class Test {
-    public static void main(String[] args) {
-      
-        // for loop
-        for (int i = 1; i <= 10; ++i) {
 
-            // if the value of i is 5 the loop terminates  
-            if (i == 5) {
-                break;
-            }      
-            System.out.println(i);
-        }   
-    }
+→ Source: [LOOPS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/a31ed35cca924bccaa4bd4981324b0e89632293b/LOOPS.java)
+
+---
+
+## 13 · Break & Continue
+
+### `break` — exits the loop immediately
+
+```java
+for (int i = 1; i <= 10; i++) {
+    if (i == 5) break;
+    System.out.println(i);   // prints 1 2 3 4
 }
 ```
-```java
-Output:
-1
-2
-3
-4
-```
-### More.[Break](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/681f7e3d5388fda8abc56180c0289e4196ae1825/BREAK.java)
 
-# **Continue**
-## The `continue` statement skips the current iteration of a loop (for, while, do...while, etc).
-**Syntax**
-```java
-continue;
-```
-**Program**
-```java
-class Main {
-  public static void main(String[] args) {
+### `continue` — skips current iteration
 
-    // for loop
-    for (int i = 1; i <= 10; ++i) {
-
-      // if value of i is between 4 and 9
-      // continue is executed
-      if (i > 4 && i < 9) {
-        continue;
-      }
-      System.out.println(i);
-    }
-  }
+```java
+for (int i = 1; i <= 10; i++) {
+    if (i > 4 && i < 9) continue;
+    System.out.println(i);   // prints 1 2 3 4 9 10
 }
 ```
-```java
-Output:
-1
-2
-3
-4
-9
-10
-```
-### More.[Continue](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/50bdc1bd0203ac07913c733313e3f5ad354a5445/CONTINUE.java)
-------
-# Array
-## An `array` is a collection of similar data type.
-**Syntax**
-```java
-dataType[] arrayName;
-int[] age;
-```
-⬇️*Indexing*
-|0  |1  |2  | 
-|---|---|---|
-|**1**|**4**|**6**| 
 
-⬆️*Elements*
+→ Sources: [BREAK.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/681f7e3d5388fda8abc56180c0289e4196ae1825/BREAK.java) · [CONTINUE.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/50bdc1bd0203ac07913c733313e3f5ad354a5445/CONTINUE.java)
 
-**Program**
-```java
-class Main {
- public static void main(String[] args) {
-  
-   // create an array
-   int[] age = {1, 4, 5, 2, 15};
+---
 
-   // access each array elements
-   System.out.println("Accessing Elements of Array:");
-   System.out.println("First Element: " + age[0]);
-   System.out.println("Second Element: " + age[1]);
-   System.out.println("Third Element: " + age[2]);
-   System.out.println("Fourth Element: " + age[3]);
-   System.out.println("Fifth Element: " + age[4]);
- }
-}
-```
-```java
-Output:
-Accessing Elements of Array:
-First Element: 1
-Second Element: 4
-Third Element: 5
-Fourth Element: 2
-Fifth Element: 15
-```
-# **2D** Array
-## A 2D array is also known as a `matrix` (a table of rows and columns).
-```java
-int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-System.out.println(myNumbers[1][2]); 
-```
-```java
-Output:7
-```
-# **3D** Array
-## `3d` array is an array of 2d arrays
+## 14 · Arrays
 
-|   | C1  | C2  | C3 |
-|---|---|---|---|
-| R1  |0,0|0,1|0,2|
-| R2  |1,0|1,1|1,2|
-| R3  |2,0|2,1|2,2|
+A fixed-size, ordered collection of elements of the same type.
 
-**Syntax**
 ```java
-String[][][] data = new String[3][4][2];
+// Declaration and initialization
+int[] scores = {95, 87, 73, 61, 45};
+
+// Access by index (zero-based)
+System.out.println(scores[0]);  // 95
+System.out.println(scores.length);  // 5
 ```
-**Program**
+
+**Index Diagram**
+
+```
+Index :  [0]  [1]  [2]  [3]  [4]
+Value :   95   87   73   61   45
+```
+
+### 2D Array (Matrix)
+
 ```java
-// test is a 3d array
-int[][][] test = {
-        {
-          {1, -2, 3}, 
-          {2, 3, 4}
-        }, 
-        { 
-          {-4, -5, 6, 9}, 
-          {1}, 
-          {2, 3}
-        } 
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
 };
+
+System.out.println(matrix[1][2]);  // 6
 ```
+
+```
+     C0   C1   C2
+R0 [  1    2    3 ]
+R1 [  4    5    6 ]
+R2 [  7    8    9 ]
+```
+
+### 3D Array
+
 ```java
-Output:
-1
--2
-3
-2
-3
-4
--4
--5
-6
-9
-1
-2
-3
+int[][][] cube = new int[3][3][3];
+// Access: cube[layer][row][col]
 ```
-More.[Array]()
-----
-# **Class**
-### * A `class` is a blueprint for the object. Before we create an object, we first need to define the class.
-### * `Sketch/Prototype` of a House (Details about floors,doors,windows etc.) With the help of this `Sketch/Prototype` we build house.
-### * House is an `Object`.
-* create a class in Java using the `class` keyword
-  
-  **Syntax**
-```java
-class ClassName{
-//fields
-//method
-}
-```
-* Fields represents `Variables`
-* Method represents `State` and `Behavior`
-> **fields** are used to store data,
-> **methods** are used to perform some operations
+
+---
+
+## 15 · OOP — Classes & Objects
+
+### Class
+
+A class is a blueprint that defines the structure and behavior of objects.
+
 ```java
 class Bicycle {
+    // Fields (state)
+    private int gear;
+    private double speed;
 
-  // state or field
-  private int gear = 5;
+    // Methods (behavior)
+    public void shiftGear(int newGear) {
+        this.gear = newGear;
+    }
 
-  // behavior or method
-  public void braking() {
-    System.out.println("Working of Braking");
-  }
+    public void accelerate(double amount) {
+        this.speed += amount;
+    }
+
+    public String getStatus() {
+        return "Gear: " + gear + " | Speed: " + speed + " km/h";
+    }
 }
 ```
-### More.[CLASS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/62e3680970bd5d85910174b199fb4aaf6536c818/CLASS.java)
-# **Objects**
-### An object is called an *instance* of a class
-### if **Wand** is a **class**
-### Then `ElderWoodWand`,`HollyWoodWand`,`WillowWoodWand` are its objects.
-**Syntax**
-```java
-className object = new className();
-```
-```java
-Weapon Wand  = new Weapon();
-Weapon ElderWoodWand  = new Weapon();
-Weapon HollyWoodWand  = new Weapon();
-```
-### More.[OBJECTS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/62e3680970bd5d85910174b199fb4aaf6536c818/OBJECTS.java)
-# **Methods**
-### A method is a block of code that performs a specific task.
-**Syntax**
-```java
-returnType methodName() {
-  // method body
-}
-```
-## call **``methods``**
-```java
-addNumbers();
-```
-## **Program**
-```java
-class Main {
 
-  // create a method
-  public int addNumbers(int a, int b) {
-    int sum = a + b;
-    // return value
-    return sum;
-  }
+### Object
 
-  public static void main(String[] args) {
-    
-    int num1 = 25;
-    int num2 = 25;
-
-    // create an object of Main
-    Main obj = new Main();
-    // calling method
-    int result = obj.addNumbers(num1, num2);
-    System.out.println("Sum is: " + result);
-  }
-}
-```java
-Output:Sum is: 40
-```
-### More.[METHOD](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f7c5e448a4a78d7aa910aac68102b03bc4fa9a1d/METHODS.java)
-# **Constructors**
-## A `constructor` in Java is similar to a method that is invoked when an object of the class is created.
-**Syntax**
+An object is a specific instance of a class.
 
 ```java
-class Test {
-  Test() {
-    // constructor body
-  }
-}
+Bicycle roadBike    = new Bicycle();
+Bicycle mountainBike = new Bicycle();
+
+roadBike.shiftGear(5);
+roadBike.accelerate(30.0);
+System.out.println(roadBike.getStatus());
+// Gear: 5 | Speed: 30.0 km/h
 ```
-####  `Test()` is a constructor.
-```java
-class Main {
-  private String name;
 
-  // constructor
-  Main() {
-    System.out.println("Constructor Called:");
-    name = "Programmer";
-  }
-
-  public static void main(String[] args) {
-
-    // constructor is invoked while
-    // creating an object of the Main class
-    Main obj = new Main();
-    System.out.println("The name is " + obj.name);
-  }
-}
 ```
-```java
-Output:
-Constructor Called:
-The name is Programmer
+Class  →  Blueprint / Template
+Object →  Runtime instance of a class
 ```
-## **Types of Constructor**
-### In Java, constructors can be divided into 3 types:
-* No-Arg Constructor
-* Parameterized Constructor
-* Default Constructor
 
-### 1.`No-Arg Constructor` If a constructor does not accept any parameters, it is known as a no-argument constructor. 
+→ Sources: [CLASS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/62e3680970bd5d85910174b199fb4aaf6536c818/CLASS.java) · [OBJECTS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/62e3680970bd5d85910174b199fb4aaf6536c818/OBJECTS.java)
+
+---
+
+## 16 · Methods
+
+A method is a reusable, named block of code that performs a specific task.
 
 ```java
-private Constructor() {
-   // body of the constructor
-}
-```
-### **Program**
-```
-class Main {
-
-  int i;
-
-  // constructor with no parameter
-  private Main() {
-    i = 5;
-    System.out.println("Constructor is called");
-  }
-
-  public static void main(String[] args) {
-
-    // calling the constructor without any parameter
-    Main obj = new Main();
-    System.out.println("Value of i: " + obj.i);
-  }
-}
-```
-```java
-Output:
-
-Constructor is called
-Value of i: 5
-```
-### 2. Parameterized Constructor
-### A Java constructor can also accept one or more parameters. Such constructors are known as parameterized constructors (constructor with parameters).
-### **Program**
-```java
-class Main {
-
-  String languages;
-
-  // constructor accepting single value
-  Main(String lang) {
-    languages = lang;
-    System.out.println(languages + " Programming Language");
-  }
-
-  public static void main(String[] args) {
-
-    // call constructor by passing a single value
-    Main obj1 = new Main("Java");
-    Main obj2 = new Main("Python");
-    Main obj3 = new Main("C++");
-  }
+returnType methodName(paramType param1, ...) {
+    // body
+    return value;  // omit if returnType is void
 }
 ```
 
 ```java
-Output:
-Java Programming Language
-Python Programming Language
-C++ Programming Language
+class MathUtils {
+
+    // Instance method
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Static method — no object needed
+    public static int square(int n) {
+        return n * n;
+    }
+
+    // Method overloading — same name, different signature
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+// Usage
+MathUtils m = new MathUtils();
+System.out.println(m.add(10, 20));         // 30
+System.out.println(MathUtils.square(5));   // 25
+System.out.println(m.add(1.5, 2.5));       // 4.0
 ```
-### 3. Java Default Constructor
-### If we do not create any constructor, the Java compiler automatically create a no-arg constructor during the execution of the program. This constructor is called default constructor.
+
+→ Source: [METHODS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f7c5e448a4a78d7aa910aac68102b03bc4fa9a1d/METHODS.java)
+
+---
+
+## 17 · Constructors
+
+A constructor initializes a new object. It has the same name as the class and no return type.
+
+### No-Arg Constructor
+
 ```java
-class Main {
+class Config {
+    String mode;
 
-  int a;
-  boolean b;
-
-  public static void main(String[] args) {
-
-    // A default constructor is called
-    Main obj = new Main();
-
-    System.out.println("Default Value:");
-    System.out.println("a = " + obj.a);
-    System.out.println("b = " + obj.b);
-  }
+    Config() {
+        mode = "default";
+    }
 }
 ```
-```java
-Output:
-Default Value:
-a = 0
-b = false
-```
-### More.[CONSTRUCTOR](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/878644bce90696d4e0cc5508f9c6961199baf52b/CONSTRUCTOR.java)
-## **Strings**
-### In Java, a `string` is a sequence of characters. For example, "hellooo" is a string containing a sequence of characters 'h', 'e', 'l', 'l', 'o',`o` and `o`.
-**Syntax**
-```java
-// create a string
-String type = "Programming";
-```
-```java
-class Main {
-  public static void main(String[] args) {
-    
-    // create strings
-    String first = "Harry";
-    String second = "James";
-    String third = "
-potter";
 
-    // print strings
-    System.out.println(first);   // print Java
-    System.out.println(second);  // print Python
-    System.out.println(third);   // print JavaScript
-  }
+### Parameterized Constructor
+
+```java
+class Server {
+    String host;
+    int port;
+
+    Server(String host, int port) {
+        this.host = host;
+        this.port = port;
+    }
+}
+
+Server s = new Server("localhost", 8080);
+```
+
+### Default Constructor
+
+If no constructor is defined, the compiler generates one automatically that sets all fields to their default values (`0`, `false`, `null`).
+
+### Constructor Chaining
+
+```java
+class Point {
+    int x, y, z;
+
+    Point() { this(0, 0, 0); }             // calls 3-arg constructor
+
+    Point(int x, int y) { this(x, y, 0); } // calls 3-arg constructor
+
+    Point(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
 }
 ```
+
+→ Source: [CONSTRUCTOR.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/878644bce90696d4e0cc5508f9c6961199baf52b/CONSTRUCTOR.java)
+
+---
+
+## 18 · Strings
+
+Strings in Java are immutable sequences of characters, backed by the `String` class.
+
 ```java
-Output:
-Harry
-James
-potter
+String s = "Hello, Java";
 ```
-## String Operations
-## 1. Get `length` of a String.
-## Use `length()`
+
+**Common String Methods**
+
+| Method                    | Description                              |
+|---------------------------|------------------------------------------|
+| `s.length()`              | Number of characters                     |
+| `s.charAt(i)`             | Character at index `i`                   |
+| `s.substring(a, b)`       | Substring from index `a` to `b-1`        |
+| `s.toUpperCase()`         | All caps                                 |
+| `s.toLowerCase()`         | All lowercase                            |
+| `s.trim()`                | Remove leading/trailing whitespace        |
+| `s.equals(other)`         | Value equality (use instead of `==`)      |
+| `s.contains("x")`         | Returns `true` if substring found        |
+| `s.replace("a", "b")`     | Replaces occurrences                     |
+| `s.split(",")`            | Splits into array on delimiter           |
+| `s.concat(other)`         | Appends another string                   |
+| `String.valueOf(42)`      | Converts primitive to String             |
+
 ```java
-class Main {
-  public static void main(String[] args) {
+String first = "Fantastic";
+String second = "Beasts";
+String result = first.concat(" " + second);
+System.out.println(result);              // Fantastic Beasts
+System.out.println(result.length());    // 15
+System.out.println(result.toUpperCase()); // FANTASTIC BEASTS
+```
 
-    // create a string
-    String say = "Hello!";
-    System.out.println("String: " + say);
+> **Performance tip:** For repeated string modification, use `StringBuilder` instead of `String` — it is mutable and avoids creating intermediate objects.
 
-    // get the length of greet
-    int length = say.length();
-    System.out.println("Length: " + length);
-  }
+```java
+StringBuilder sb = new StringBuilder();
+sb.append("Java").append(" is ").append("fast");
+System.out.println(sb.toString());  // Java is fast
+```
+
+---
+
+## 19 · Access Modifiers
+
+Control the visibility and accessibility of classes, fields, and methods.
+
+| Modifier    | Same Class | Same Package | Subclass | Everywhere |
+|-------------|:----------:|:------------:|:--------:|:----------:|
+| `private`   | ✓          | ✗            | ✗        | ✗          |
+| (default)   | ✓          | ✓            | ✗        | ✗          |
+| `protected` | ✓          | ✓            | ✓        | ✗          |
+| `public`    | ✓          | ✓            | ✓        | ✓          |
+
+```java
+class BankAccount {
+    private double balance;       // accessible only within this class
+
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+
+    public double getBalance() {  // controlled read access
+        return balance;
+    }
 }
 ```
-```java
-Output
-String: Hello! World
-Length: 05
+
+> **Encapsulation principle:** Fields should generally be `private`. Expose controlled access through `public` getters/setters.
+
+---
+
+## 20 · Recursion
+
+A method that calls itself to solve a problem by breaking it into smaller sub-problems.
+
 ```
-## 2. Join Two Java Strings.
-## using the `concat()` method.
+recurse(n)
+  └─ recurse(n-1)
+       └─ recurse(n-2)
+            └─ base case → unwinds
+```
+
+**Classic Example — Factorial**
+
 ```java
-class Main {
-  public static void main(String[] args) {
+static int factorial(int n) {
+    if (n == 0) return 1;         // base case
+    return n * factorial(n - 1);  // recursive call
+}
+// factorial(5) → 5 * 4 * 3 * 2 * 1 = 120
+```
 
-    // first string
-    String first = "Fantastic ";
-    System.out.println("First String: " + first);
+**Fibonacci**
 
-    // create second
-    String second = "Beasts";
-    System.out.println("Second String: " + second);
-
-    // join two strings
-    String joinedString = first.concat(second);
-    System.out.println("Joined String: " + joinedString);
-  }
+```java
+static int fib(int n) {
+    if (n <= 1) return n;
+    return fib(n - 1) + fib(n - 2);
 }
 ```
-```java
-First String: Fantastic 
-Second String: Beast    
-Joined String: Fantastic Beast
-```
-More.[STRINGS]()
-# `Access Modifiers`
-##  `Access modifiers` are used to set the accessibility (visibility) of classes, interfaces, variables, methods, constructors, data members, and the setter methods.
-### `Syntax`
+
+> Every recursive function needs a **base case** to prevent infinite recursion (stack overflow).
+
+---
+
+## 21 · Inheritance & Abstract Classes
+
+### Inheritance
+
+Allows a child class to acquire fields and methods of a parent class.
+
 ```java
 class Animal {
-    public void method1() {...}
+    String name;
 
-   private void method2() {...}
-}
-```
-* `method1` is public - This means it can be accessed by other classes.
-* `method2` is private - This means it can not be accessed by other classes.
-> `Access modifiers` in Java. They are also known as `visibility modifiers.`
-> Note: You cannot set the access modifier of `getters` methods.
-
-* `Modifier`| `Description`
-* `Default` | Declarations are visible only within the package (package private).
-* `Private` | Declarations are visible within the class only.
-* `Protected`| Declarations are visible within the package or all subclasses.
-* `Public`   | Declarations are visible everywhere.
-
-More.[Access_Modifier]()
-
-# `Recursion` 
-## A method that calls itself is known as a `recursive method`,This process is known as `recursion.`
-### **Working**
-```java
-public static void main(String[] args) {
-.. .. ..
-recurse()
-.. .. ..
-}
-static void recurse() {
-  .. .. ..
-  recurse()
-  .. .. .. 
-  }
-```
-More.[]().
-# **Inheritance**
-## `Inheritance` is one of the key features of OOP that allows us to create a new class from an existing class.
-> Parent class<br>
-|---> Child class
-
-The `extends` keyword is used to perform inheritance.
-**Syntax**
-```java
-class Animal {
-  // methods and fields
+    void eat() {
+        System.out.println(name + " eats.");
+    }
 }
 
-// use of extends keyword
-// to perform inheritance
 class Dog extends Animal {
-
-  // methods and fields of Animal
-  // methods and fields of Dog
+    void bark() {
+        System.out.println(name + " barks.");
+    }
 }
-```
-## **Types of inheritance**
-### **1. Single Inheritance**
-In single inheritance, a single subclass extends from a single superclass. 
-### **2. Multilevel Inheritance**
-In multilevel inheritance, a subclass extends from a superclass and then the same subclass acts as a superclass for another class.
-### **3. Hierarchical Inheritance**
-In hierarchical inheritance, multiple subclasses extend from a single superclass.
-### **4. Multiple Inheritance**
-In multiple inheritance, a single subclass extends from multiple superclasses.
-### **5. Hybrid Inheritance**
-Hybrid inheritance is a combination of two or more types of inheritance.
-### More[]()
 
-## **Abstract Class**
-### The abstract class in Java cannot be instantiated (we cannot create objects of abstract classes). We use the abstract keyword to declare an abstract class. 
+Dog d = new Dog();
+d.name = "Rex";
+d.eat();   // Rex eats.
+d.bark();  // Rex barks.
+```
+
+**Types of Inheritance**
+
+```
+Single       :  A → B
+Multilevel   :  A → B → C
+Hierarchical :  A → B
+               A → C
+Multiple     :  A, B → C  (via interfaces only in Java)
+Hybrid       :  combination of above
+```
+
+> Java does **not** support multiple class inheritance. Use interfaces instead.
+
+### Abstract Class
+
+Cannot be instantiated. Used to define a common template for subclasses.
 
 ```java
-abstract class Language {
+abstract class Shape {
+    abstract double area();          // must be implemented by subclass
 
-  // abstract method
-  abstract void method1();
+    void describe() {
+        System.out.println("Area: " + area());
+    }
+}
 
-  // regular method
-  void method2() {
-    System.out.println("This is regular method");
-  }
+class Circle extends Shape {
+    double radius;
+    Circle(double r) { this.radius = r; }
+
+    @Override
+    double area() { return Math.PI * radius * radius; }
+}
+
+class Rectangle extends Shape {
+    double w, h;
+    Rectangle(double w, double h) { this.w = w; this.h = h; }
+
+    @Override
+    double area() { return w * h; }
 }
 ```
+
+---
+
+## 22 · Interfaces
+
+A fully abstract contract. All methods are implicitly `public abstract` (unless `default` or `static`).
+
 ```java
-abstract void display();
-```
-## Abstraction
-### The major use of abstract classes and methods is to achieve abstraction in Java.Abstraction is an important concept of object-oriented programming that allows us to hide unnecessary details and only show the needed information.
+interface Drawable {
+    void draw();                           // abstract
+    default void describe() {             // default implementation
+        System.out.println("I am drawable.");
+    }
+}
 
-This allows us to manage complexity by omitting or hiding details with a simpler, higher-level idea.
+interface Resizable {
+    void resize(double factor);
+}
+
+// A class can implement multiple interfaces
+class Canvas implements Drawable, Resizable {
+    @Override
+    public void draw() { System.out.println("Drawing on canvas"); }
+
+    @Override
+    public void resize(double factor) { System.out.println("Resized by " + factor); }
+}
+```
+
+**Interface vs Abstract Class**
+
+| Feature              | Interface              | Abstract Class          |
+|----------------------|------------------------|-------------------------|
+| Multiple inheritance | Supported              | Not supported           |
+| Fields               | `static final` only    | Any type                |
+| Constructor          | None                   | Allowed                 |
+| Method body          | `default`/`static` only| Any method              |
+| Use case             | Define capability      | Shared base behavior    |
+
+---
+
+## 23 · Polymorphism
+
+The ability of a single interface to represent different underlying forms.
+
+### Compile-time (Overloading)
+
+Same method name, different parameters — resolved at compile time.
+
 ```java
-abstract class MotorBike {
-  abstract void brake();
-}
-
-class SportsBike extends MotorBike {
-    
-  // implementation of abstract method
-  public void brake() {
-    System.out.println("SportsBike Brake");
-  }
-}
-
-class MountainBike extends MotorBike {
-    
-  // implementation of abstract method
-  public void brake() {
-    System.out.println("MountainBike Brake");
-  }
-}
-
-class Main {
-  public static void main(String[] args) {
-    MountainBike m1 = new MountainBike();
-    m1.brake();
-    SportsBike s1 = new SportsBike();
-    s1.brake();
-  }
+class Printer {
+    void print(int n)    { System.out.println("int: " + n); }
+    void print(String s) { System.out.println("str: " + s); }
+    void print(int a, int b) { System.out.println("sum: " + (a + b)); }
 }
 ```
+
+### Runtime (Overriding)
+
+Subclass provides its own implementation of a parent method — resolved at runtime via dynamic dispatch.
+
 ```java
-Output:
+class Animal   { void sound() { System.out.println("...");  } }
+class Dog      extends Animal { @Override void sound() { System.out.println("Woof"); } }
+class Cat      extends Animal { @Override void sound() { System.out.println("Meow"); } }
 
-MountainBike Brake
-SportsBike Brake
+Animal a1 = new Dog();
+Animal a2 = new Cat();
+a1.sound();   // Woof
+a2.sound();   // Meow
 ```
-## Interface
-### An interface is a fully abstract class. It includes a group of abstract methods (methods without a body).We use the interface keyword to create an interface in Java.
-```java
-interface Language {
-  public void getType();
 
-  public void getVersion();
-}
 ```
-## Polymorphism
-### Polymorphism is an important concept of object-oriented programming. It simply means more than one form.
-### Why Polymorphism?
-Polymorphism allows us to create consistent code. In the previous example, we can also create different methods: renderSquare() and renderCircle() to render Square and Circle, respectively.
+Compile time  →  Method overloading
+Runtime       →  Method overriding via dynamic dispatch
+```
 
-Idont have time for java 
-Taking Break
-Starting c++ soon
-Im sorry 
-abc
-def
-ghi
-ijk
-4
-5
-6
-7
-mutual exclusion
-no preemption
-hold and wait
-DAAA
-12
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-36
-34
-3536
-123
-321
-1
-2
-3
-4
-5
+---
 
+## Reference
 
+| Topic         | Source File                                                                                  |
+|---------------|----------------------------------------------------------------------------------------------|
+| Introduction  | [01-INTRODUCTION](01-INTRODUCTION)                                                           |
+| Variables     | [VARIABLES & LITERALS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/73668d87dd759660010b1dd97df5da1a875116c4/VARIABLES%20%26%20LITERALS.java) |
+| Data Types    | [DATA TYPES](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/e17be1a85679a1bdaa0c939bb4a64034f101d8ed/DATA%20TYPES) |
+| Operators     | [OPERATORS](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f1e4315bdc6513efbf77f513434aeacdf6904624/OPERATORS)     |
+| I/O           | [INPUT OUTPUT](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f9600f8e4849baeaf3ed958f5ba6032147aaca3a/INPUT%20OUTPUT) |
+| Flow Control  | [FLOW\_CONTROL.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f94b4dcfcffa9630ab86be5bc62fc767e26f7ee9/FLOW_CONTROL.java) |
+| Switch        | [SWITCH.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/a09732a8128d1dcc1d1d7335b3306978e52fb926/SWITCH.java) |
+| Loops         | [LOOPS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/a31ed35cca924bccaa4bd4981324b0e89632293b/LOOPS.java)   |
+| Break         | [BREAK.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/681f7e3d5388fda8abc56180c0289e4196ae1825/BREAK.java)   |
+| Continue      | [CONTINUE.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/50bdc1bd0203ac07913c733313e3f5ad354a5445/CONTINUE.java) |
+| Class/Objects | [CLASS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/62e3680970bd5d85910174b199fb4aaf6536c818/CLASS.java) · [OBJECTS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/62e3680970bd5d85910174b199fb4aaf6536c818/OBJECTS.java) |
+| Methods       | [METHODS.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/f7c5e448a4a78d7aa910aac68102b03bc4fa9a1d/METHODS.java) |
+| Constructor   | [CONSTRUCTOR.java](https://github.com/Ayushburman/JAVA-PROGRAMMING/blob/878644bce90696d4e0cc5508f9c6961199baf52b/CONSTRUCTOR.java) |
+
+---
+
+```
+JAVA-PROGRAMMING  ·  github.com/Ayushburman
+```
